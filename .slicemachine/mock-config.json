@@ -1,0 +1,31 @@
+{
+  "_cts": {
+    "homepage": {},
+    "page": {}
+  },
+  "slices": {
+    "NavSlice": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "OpeningImg": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Albums": {
+      "default": {
+        "items": {}
+      }
+    },
+    "AboutSlice": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "FooterSlice": {},
+    "PhotoGallerySlice": {},
+    "SubText": {}
+  }
+}
