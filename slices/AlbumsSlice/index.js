@@ -20,7 +20,7 @@ const Albums = ({ slice }) => (
 
     {
   slice?.items?.map((item, i) =>
-    <PrismicNextImage field={item.album} 
+    <PrismicNextImage key={i} field={item.album} 
     alt=""
     width={400} 
     height={411}

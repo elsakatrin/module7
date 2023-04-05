@@ -85,7 +85,7 @@ type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice;
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
+export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 export type AllDocumentTypes = HomepageDocument | PageDocument;
 /**
  * Primary content in AboutSlice → Primary
@@ -295,6 +295,46 @@ interface NavSliceSliceDefaultPrimary {
      *
      */
     logo: prismicT.ImageField<never>;
+    /**
+     * NavLink1 field in *NavSlice → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.navlink1
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    navlink1: prismicT.LinkField;
+    /**
+     * NavLink2 field in *NavSlice → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.navlink2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    navlink2: prismicT.LinkField;
+    /**
+     * Navlink3 field in *NavSlice → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.navlink3
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    navlink3: prismicT.LinkField;
+    /**
+     * NavLink4 field in *NavSlice → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.navlink4
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    navlink4: prismicT.LinkField;
 }
 /**
  * Item in NavSlice → Items

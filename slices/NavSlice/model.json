@@ -18,6 +18,38 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "navlink1": {
+          "type": "Link",
+          "config": {
+            "label": "NavLink1",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "navlink2": {
+          "type": "Link",
+          "config": {
+            "label": "NavLink2",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "navlink3": {
+          "type": "Link",
+          "config": {
+            "label": "Navlink3",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "navlink4": {
+          "type": "Link",
+          "config": {
+            "label": "NavLink4",
+            "placeholder": "",
+            "select": null
+          }
         }
       },
       "items": {
@@ -26,6 +58,7 @@
           "config": {
             "label": "NavLink",
             "placeholder": "",
+            "allowTargetBlank": false,
             "select": null
           }
         }

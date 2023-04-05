@@ -7,9 +7,9 @@ export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider
       linkResolver={linkResolver}
-      internalLinkComponent={({ href, ...props }) => (
+      internalLinkComponent={({ href, children, ...props }) => (
         <Link href={href}>
-          <a {...props} />
+          <a {...props}>{children}</a>
         </Link>
       )}
     >
@@ -19,3 +19,7 @@ export default function App({ Component, pageProps }) {
     </PrismicProvider>
   )
 }
+
+// Prismic link automatically resolves your external links, but next link can link between internal pages. 
+// Here PrismicProvider is wrapping the app to condigure Prismic Link to use next link for internal links. internalLinkComponent is configured as a prop
+//Now Prismic link will use the next link component for internal links

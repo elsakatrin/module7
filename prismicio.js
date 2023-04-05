@@ -5,7 +5,8 @@ import sm from './sm.json'
 
 export const elsakatrin = prismic.getRepositoryName(sm.apiEndpoint)
 
-//Routes trough ur pages
+//Routes through pages
+//I only have one single custom type, the homepage. Page is a repeatable page that returns based on the uid, which is called slug in the slice machine
 export function linkResolver(doc) {
   switch (doc.type) {
     case 'homepage':

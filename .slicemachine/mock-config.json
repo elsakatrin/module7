@@ -6,7 +6,8 @@
   "slices": {
     "NavSlice": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "OpeningImg": {
