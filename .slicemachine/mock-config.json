@@ -27,6 +27,7 @@
     },
     "FooterSlice": {},
     "PhotoGallerySlice": {},
-    "SubText": {}
+    "SubText": {},
+    "AlbumsSlice": {}
   }
 }

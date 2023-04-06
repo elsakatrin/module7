@@ -10,7 +10,9 @@ import { linkResolver } from '@/prismicio';
  * @typedef {import("@prismicio/react").SliceComponentProps<NavSliceSlice>} NavSliceProps
  * @param { NavSliceProps }
  */
+
 const NavSlice = ({ slice }) => (
+ 
   <section>
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>
@@ -18,13 +20,18 @@ const NavSlice = ({ slice }) => (
 
 
     <div>
+      <div > 
+        
     <PrismicNextImage field={slice.primary.logo} 
           alt=""
           width={303} 
           height={169}
           imgixParams={{ vib: 40 }}/>
+</div>
+
   <span>  
-  <PrismicLink href={slice.primary.navlink1}>Albúm</PrismicLink>
+  <PrismicLink href={slice.primary.navlink1.uid}>Albúm</PrismicLink>
+ {console.log(slice.primary.navlink1.uid)}
 
 
   {/* <PrismicLink  field={slice.primary.navlink2}>Um mig</PrismicLink>
@@ -56,5 +63,4 @@ const NavSlice = ({ slice }) => (
     `}</style>
   </section>
 )
-
 export default NavSlice

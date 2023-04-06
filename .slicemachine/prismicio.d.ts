@@ -181,6 +181,16 @@ interface AlbumsSliceDefaultPrimary {
      *
      */
     description: prismicT.RichTextField;
+    /**
+     * PageLink field in *AlbumsSlice → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: albums.primary.pagelink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    pagelink: prismicT.LinkField;
 }
 /**
  * Item in AlbumsSlice → Items
@@ -197,6 +207,16 @@ export interface AlbumsSliceDefaultItem {
      *
      */
     album: prismicT.ImageField<never>;
+    /**
+     * PageLink field in *AlbumsSlice → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: albums.items[].pagelink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    pagelink: prismicT.LinkField;
 }
 /**
  * Default variation for AlbumsSlice Slice

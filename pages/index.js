@@ -6,6 +6,7 @@ import { components } from '../slices'
 const Page = ({ page, navigation, settings }) => {
   return <SliceZone slices={page.data.slices} components={components} />
 }
+
  
 export default Page
  
