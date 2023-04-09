@@ -5,6 +5,8 @@ import { PrismicLink } from '@prismicio/react'
 import { linkResolver } from '@/prismicio'
 import { useEffect, useState } from 'react'
 import styles from './../../styles/Albums/albums.module.css'
+import { motion, useScroll } from "framer-motion"
+
 /**
  * @typedef {import("@prismicio/client").Content.AlbumsSlice} AlbumsSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<AlbumsSlice>} AlbumsProps
@@ -18,6 +20,9 @@ const Albums = ({ slice }) => (
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
+  
+    {/* <motion.div  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }} /> */}
 
     <div className={styles.albumtxt} >
     <PrismicRichText field={slice.primary.title} />
@@ -58,17 +63,20 @@ const Albums = ({ slice }) => (
         <div className={styles.overlaytxt}>
             <PrismicRichText field={item.overlaytext} />
         </div>
+
       </div>
     </PrismicLink> 
      )
+ 
 }  
 </div>
+  </section>
+)
 
 
+export default Albums  
 
-
-
- {/* <div className={styles.albums}>
+{/* <div className={styles.albums}>
     {slice?.items?.map((item, i) =>
     <PrismicLink 
     key={i} 
@@ -106,11 +114,3 @@ const Albums = ({ slice }) => (
      )
 }   
     </div>  */}
-    
-
-  </section>
-)
-
-
-export default Albums  
-

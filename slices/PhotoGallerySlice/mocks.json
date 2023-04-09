@@ -7,9 +7,9 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "heading1",
+            "type": "paragraph",
             "content": {
-              "text": "Blood"
+              "text": "Veniam est excepteur anim sit aliquip incididunt aliquip reprehenderit ut in eiusmod ea commodo mollit consequat. Ex proident ex duis eu deserunt non eiusmod nulla laborum in consequat. Exercitation laboris excepteur fugiat aliqua."
             }
           }
         ]
@@ -20,7 +20,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Esse mollit sint ipsum aute quis."
+              "text": "Esse exercitation exercitation non. Velit quis consectetur exercitation minim ut sit amet laborum est magna sint ad."
             }
           }
         ]
@@ -33,7 +33,6 @@
           [
             "photos",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
                 "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
@@ -51,6 +50,9 @@
                 },
                 "background": "transparent"
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ]

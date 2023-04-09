@@ -1,31 +1,50 @@
-.footerimg{
+.contentwrapper{
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.textwrapper{
+    position: absolute;
+    left: 10rem;
+    margin-top: 7rem;
+    z-index: 1;
+
+}
+
+.cta{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.email{
+    margin-top: -0.7rem;
+    // margin-left: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.overlay{
     display: flex;
     justify-content: center;
     text-align: center;
     margin: auto;
     margin-bottom: 4rem;
-
-}
-// .overlay{
-//     // position: absolute;
-//     background-color: rgba(255, 255, 255, 0.5);
-//     bottom: 0;
-// right: 0;
-// top: 0;
-// left: 0;
-// visibility: visible;
-// }
-
-.textwrapper{
-    position: absolute;
-    left: 10rem;
-    margin-top: 8rem;
-}
-
-.cta{
+    overflow: hidden;
     position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    inset: 0;
+}
 
+.footerimg{
+    object-fit: cover;
+    opacity: 0.6;
+    // z-index: -1;
+    background-size: cover;
+    background-position: center;
 }
-.email{
-    margin-left: 0.6rem;
-}
+
+
+
+

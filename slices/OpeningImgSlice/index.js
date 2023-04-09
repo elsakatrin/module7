@@ -23,6 +23,7 @@ const OpeningImg = ({ slice }) => (
           alt=""
           width={1239} 
           height={622}
+          priority
           imgixParams={{ 
             q: 100, //quality, is automatically is set to 45 / only works for lossy formats like jpg and avif
             sharp: 10, //Give the image a bit sharpness after they lost some in the compression 

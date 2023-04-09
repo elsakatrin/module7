@@ -4,6 +4,7 @@ import { PrismicNextImage } from '@prismicio/next'
 import { PrismicLink } from '@prismicio/react';
 import Link from 'next/link';
 import { linkResolver } from '@/prismicio';
+import styles from './../../styles/Nav/nav.module.css'
 
 /**
  * @typedef {import("@prismicio/client").Content.NavSliceSlice} NavSliceSlice
@@ -13,23 +14,22 @@ import { linkResolver } from '@/prismicio';
 
 const NavSlice = ({ slice }) => (
  
-  <section>
+  <section className={styles.contentwrapper}>
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>
       </span>
 
-
     <div>
-      <div > 
-        
+      <div className={styles.logo}> 
     <PrismicNextImage field={slice.primary.logo} 
           alt=""
           width={303} 
           height={169}
-          imgixParams={{ vib: 40 }}/>
-</div>
+          imgixParams={{  
+            q: 100}}/>
+      </div>
 
-  <span>  
+  <div className={styles.navlinks}>  
   <PrismicLink href={slice.primary.navlink1.uid}>Albúm</PrismicLink>
  {console.log(slice.primary.navlink1.uid)}
 
@@ -44,23 +44,8 @@ const NavSlice = ({ slice }) => (
     <PrismicLink key={item.uid} href={item.navlink} linkResolver={linkResolver}>My Link</PrismicLink>
       )
     } */ }
-</span>  
-
-
-
+</div>  
     </div>
- 
-
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
   </section>
 )
 export default NavSlice

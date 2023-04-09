@@ -43,6 +43,9 @@
             },
             "albums": {
               "type": "SharedSlice"
+            },
+            "nav_slice": {
+              "type": "SharedSlice"
             }
           }
         }

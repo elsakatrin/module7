@@ -25,12 +25,25 @@
         "primary": {}
       }
     },
-    "FooterSlice": {},
-    "PhotoGallerySlice": {},
-    "SubText": {},
-    "AlbumsSlice": {
+    "FooterSlice": {
       "default": {
         "primary": {}
+      }
+    },
+    "PhotoGallerySlice": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "SubText": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "AlbumsSlice": {
+      "default": {
+        "primary": {},
+        "items": {}
       }
     }
   }

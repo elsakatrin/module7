@@ -7,9 +7,9 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "heading1",
+            "type": "paragraph",
             "content": {
-              "text": "Light"
+              "text": "Pariatur nulla et mollit incididunt."
             }
           }
         ]
@@ -20,7 +20,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Esse enim do dolore nisi veniam ad laboris occaecat consectetur mollit. Voluptate ullamco consectetur incididunt voluptate eiusmod consequat officia adipisicing pariatur."
+              "text": "Elit amet incididunt labore sit culpa voluptate commodo eiusmod consectetur voluptate tempor ullamco ex tempor."
             }
           }
         ]

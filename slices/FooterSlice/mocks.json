@@ -7,9 +7,9 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "heading1",
+            "type": "paragraph",
             "content": {
-              "text": "Round"
+              "text": "Laborum et in irure dolore aute officia sint tempor excepteur. Adipisicing labore occaecat incididunt sit fugiat exercitation aute incididunt elit in officia. Ea deserunt in duis enim commodo velit nulla laborum culpa et pariatur deserunt eiusmod eu est."
             }
           }
         ]
@@ -26,7 +26,6 @@
         ]
       },
       "footerimage": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
@@ -44,6 +43,9 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       }
     },

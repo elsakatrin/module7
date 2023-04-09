@@ -75,7 +75,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice | AlbumsSlice;
+type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice | AlbumsSlice | NavSliceSlice;
 /**
  * Page document from Prismic
  *
@@ -95,13 +95,13 @@ interface AboutSliceSliceDefaultPrimary {
     /**
      * Title field in *AboutSlice → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Rich Text
      * - **Placeholder**: This is where it all begins...
      * - **API ID Path**: about_slice.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.TitleField;
+    title: prismicT.RichTextField;
     /**
      * AboutName field in *AboutSlice → Primary*
      *
@@ -164,13 +164,13 @@ interface AlbumsSliceDefaultPrimary {
     /**
      * Title field in *AlbumsSlice → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Rich Text
      * - **Placeholder**: This is where it all begins...
      * - **API ID Path**: albums.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.TitleField;
+    title: prismicT.RichTextField;
     /**
      * Description field in *AlbumsSlice → Primary*
      *
@@ -259,13 +259,13 @@ interface FooterSliceSliceDefaultPrimary {
     /**
      * Title field in *FooterSlice → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Rich Text
      * - **Placeholder**: This is where it all begins...
      * - **API ID Path**: footer_slice.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.TitleField;
+    title: prismicT.RichTextField;
     /**
      * Description field in *FooterSlice → Primary*
      *
@@ -452,13 +452,13 @@ interface PhotoGallerySliceSliceDefaultPrimary {
     /**
      * Title field in *PhotoGallerySlice → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Rich Text
      * - **Placeholder**: This is where it all begins...
      * - **API ID Path**: photo_gallery_slice.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.TitleField;
+    title: prismicT.RichTextField;
     /**
      * Description field in *PhotoGallerySlice → Primary*
      *
@@ -517,13 +517,13 @@ interface SubTextSliceDefaultPrimary {
     /**
      * Title field in *SubText → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Rich Text
      * - **Placeholder**: This is where it all begins...
      * - **API ID Path**: sub_text.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.TitleField;
+    title: prismicT.RichTextField;
     /**
      * Description field in *SubText → Primary*
      *

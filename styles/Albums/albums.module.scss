@@ -5,12 +5,12 @@
 
 .albumtxt{
     text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin: auto;
     margin-bottom: 5rem;
+    font-weight: 300;
+    font-size: 1.8rem;
 }
+
+
 //Gera responsive
 .albumcontainer{
     display: flex;
@@ -41,6 +41,7 @@
     cursor: pointer;
 }
 
+//Overlay color and text when hovered 
 .overlaytxt{
 position: absolute;
 text-align: center;
@@ -58,7 +59,8 @@ opacity: 0;
 transition: .5s ease;
 }
 
-.albumimg:hover .overlaytxt {//Change the fill color when the div is hovered over
+//Makes hover color and text visible when hovering
+.albumimg:hover .overlaytxt {
     visibility: visible;
     opacity: 1;
 

@@ -9,23 +9,21 @@ import styles from './../../styles/Footer/footer.module.css'
  * @param { FooterSliceProps }
  */
 const FooterSlice = ({ slice }) => (
-  <section>
+  <section className={styles.contentwrapper}>
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
 
-<div>
+
   <div className={styles.textwrapper}>
-
-  <div className={styles.cta}>
-<PrismicRichText field={slice.primary.title} />
+    <div className={styles.cta}>
+      <PrismicRichText field={slice.primary.title} />
+    </div>
+    <div className={styles.email}>
+      <PrismicRichText field={slice.primary.description} />
+    </div>
 </div>
 
-<div className={styles.email}>
-<PrismicRichText field={slice.primary.description} />
-</div>
-
-</div>
   <div className={styles.overlay}> 
     <div className={styles.footerimg}>
     <PrismicNextImage field={slice.primary.footerimage} 
@@ -34,7 +32,7 @@ const FooterSlice = ({ slice }) => (
         height={622}/>
     </div>
   </div>
-</div>
+
   
   </section>
 )

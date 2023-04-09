@@ -1,21 +1,45 @@
-.footerimg {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-  margin-bottom: 4rem;
+.contentwrapper {
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .textwrapper {
   position: absolute;
   left: 10rem;
-  margin-top: 8rem;
+  margin-top: 7rem;
+  z-index: 1;
 }
 
 .cta {
-  position: relative;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 .email {
-  margin-left: 0.6rem;
+  margin-top: -0.7rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  inset: 0;
+}
+
+.footerimg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.6;
+  background-size: cover;
+  background-position: center;
 }
