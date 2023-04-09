@@ -75,7 +75,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice;
+type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice | AlbumsSlice;
 /**
  * Page document from Prismic
  *
@@ -217,6 +217,16 @@ export interface AlbumsSliceDefaultItem {
      *
      */
     pagelink: prismicT.LinkField;
+    /**
+     * OverlayText field in *AlbumsSlice → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: albums.items[].overlaytext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    overlaytext: prismicT.RichTextField;
 }
 /**
  * Default variation for AlbumsSlice Slice

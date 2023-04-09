@@ -1,10 +1,12 @@
 import { SliceZone } from '@prismicio/react'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
+import { useEffect } from 'react'
  
 //can take navigation and settings out
 const Page = ({ page, navigation, settings }) => {
   return <SliceZone slices={page.data.slices} components={components} />
+  
 }
 
  
@@ -18,4 +20,5 @@ export async function getStaticProps({ previewData }) {
       page
     }
   }
+
 }

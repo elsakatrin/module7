@@ -1,0 +1,31 @@
+.footerimg{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 4rem;
+
+}
+// .overlay{
+//     // position: absolute;
+//     background-color: rgba(255, 255, 255, 0.5);
+//     bottom: 0;
+// right: 0;
+// top: 0;
+// left: 0;
+// visibility: visible;
+// }
+
+.textwrapper{
+    position: absolute;
+    left: 10rem;
+    margin-top: 8rem;
+}
+
+.cta{
+    position: relative;
+
+}
+.email{
+    margin-left: 0.6rem;
+}

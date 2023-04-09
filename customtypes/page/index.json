@@ -40,6 +40,9 @@
             },
             "sub_text": {
               "type": "SharedSlice"
+            },
+            "albums": {
+              "type": "SharedSlice"
             }
           }
         }

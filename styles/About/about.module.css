@@ -1,0 +1,38 @@
+.contentwrapper {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.aboutwrapper {
+  display: flex;
+  margin-bottom: 17rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+  margin-left: 3rem;
+  font-size: larger;
+  font-weight: 400;
+}
+
+.aboutimg {
+  display: flex;
+  float: left;
+  margin-left: 8rem;
+}
+
+.abouttxt {
+  float: right;
+  margin-left: 3rem;
+  margin-right: 13rem;
+  vertical-align: 50%;
+  line-height: 1.6;
+}

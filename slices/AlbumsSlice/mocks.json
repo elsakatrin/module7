@@ -9,7 +9,7 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Stage"
+              "text": "Light"
             }
           }
         ]
@@ -71,6 +71,20 @@
                 "__TYPE__": "ExternalLink",
                 "url": "http://google.com"
               }
+            }
+          ],
+          [
+            "overlaytext",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Reprehenderit exercitation veniam sunt. Cillum officia pariatur est culpa veniam ullamco ut reprehenderit voluptate nisi."
+                  }
+                }
+              ]
             }
           ]
         ]

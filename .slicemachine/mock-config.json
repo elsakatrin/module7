@@ -28,6 +28,10 @@
     "FooterSlice": {},
     "PhotoGallerySlice": {},
     "SubText": {},
-    "AlbumsSlice": {}
+    "AlbumsSlice": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

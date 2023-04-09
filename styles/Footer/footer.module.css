@@ -1,0 +1,21 @@
+.footerimg {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.textwrapper {
+  position: absolute;
+  left: 10rem;
+  margin-top: 8rem;
+}
+
+.cta {
+  position: relative;
+}
+
+.email {
+  margin-left: 0.6rem;
+}

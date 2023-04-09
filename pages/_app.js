@@ -2,7 +2,10 @@ import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../prismicio'
- 
+import { Josefin_Sans } from 'next/font/google'
+
+const josefin_sans = Josefin_Sans({ subsets: ['latin'] })
+
 export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider
@@ -13,6 +16,13 @@ export default function App({ Component, pageProps }) {
         </Link>
       )}
     >
+      {/* Putting Josefin Sans as global font */}
+      <style jsx global>{`
+        html {
+          font-family: ${josefin_sans.style.fontFamily};
+        }
+      `}</style>
+
       <PrismicPreview repositoryName={repositoryName}>
         <Component {...pageProps} />
       </PrismicPreview>

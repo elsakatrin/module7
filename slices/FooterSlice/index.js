@@ -1,6 +1,7 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
+import styles from './../../styles/Footer/footer.module.css'
 
 /**
  * @typedef {import("@prismicio/client").Content.FooterSliceSlice} FooterSliceSlice
@@ -12,30 +13,29 @@ const FooterSlice = ({ slice }) => (
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
-{/* <Head>
-  <tite>Elsa Katrín Ljósmyndari</tite>
-</Head> */}
+
 <div>
+  <div className={styles.textwrapper}>
+
+  <div className={styles.cta}>
 <PrismicRichText field={slice.primary.title} />
+</div>
+
+<div className={styles.email}>
 <PrismicRichText field={slice.primary.description} />
-<PrismicNextImage field={slice.primary.footerimage} 
-    alt=""
-    width={1239} 
-    height={622}/>
-
-
+</div>
 
 </div>
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
+  <div className={styles.overlay}> 
+    <div className={styles.footerimg}>
+    <PrismicNextImage field={slice.primary.footerimage} 
+        alt=""
+        width={1239} 
+        height={622}/>
+    </div>
+  </div>
+</div>
+  
   </section>
 )
 
