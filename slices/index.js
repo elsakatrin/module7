@@ -4,6 +4,7 @@ import AboutSlice from './AboutSlice';
 import AlbumsSlice from './AlbumsSlice';
 import FooterSlice from './FooterSlice';
 import NavSlice from './NavSlice';
+import NavigationItem from './NavigationItem';
 import OpeningImgSlice from './OpeningImgSlice';
 import PhotoGallerySlice from './PhotoGallerySlice';
 import SubText from './SubText';
@@ -13,6 +14,7 @@ export {
 	AlbumsSlice,
 	FooterSlice,
 	NavSlice,
+	NavigationItem,
 	OpeningImgSlice,
 	PhotoGallerySlice,
 	SubText,
@@ -23,6 +25,7 @@ export const components = {
 	albums: AlbumsSlice,
 	footer_slice: FooterSlice,
 	nav_slice: NavSlice,
+	navigation_item: NavigationItem,
 	opening_img: OpeningImgSlice,
 	photo_gallery_slice: PhotoGallerySlice,
 	sub_text: SubText,

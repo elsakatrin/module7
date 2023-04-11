@@ -14,7 +14,7 @@ const FooterSlice = ({ slice }) => (
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
 
-
+  {/* Text over the footer image - CTA text */}
   <div className={styles.textwrapper}>
     <div className={styles.cta}>
       <PrismicRichText field={slice.primary.title} />
@@ -22,19 +22,24 @@ const FooterSlice = ({ slice }) => (
     <div className={styles.email}>
       <PrismicRichText field={slice.primary.description} />
     </div>
-</div>
-
+  </div>
+  {/* Overlay color and image */}
   <div className={styles.overlay}> 
     <div className={styles.footerimg}>
     <PrismicNextImage field={slice.primary.footerimage} 
         alt=""
         width={1239} 
-        height={622}/>
+        height={622}
+        imgixParams={{ 
+          q: 100, 
+          sharp: 10,
+          auto: 'format', 
+          fm: 'jpg', 
+          cs: 'srgb'
+          }}/>
     </div>
   </div>
-
-  
-  </section>
+</section>
 )
 
 export default FooterSlice

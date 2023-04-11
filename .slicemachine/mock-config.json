@@ -1,7 +1,8 @@
 {
   "_cts": {
     "homepage": {},
-    "page": {}
+    "page": {},
+    "navigation": {}
   },
   "slices": {
     "NavSlice": {
@@ -44,6 +45,11 @@
       "default": {
         "primary": {},
         "items": {}
+      }
+    },
+    "NavigationItem": {
+      "default": {
+        "primary": {}
       }
     }
   }

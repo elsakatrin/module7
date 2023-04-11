@@ -1,17 +1,31 @@
 .contentwrapper{
     margin-left: 4rem;
     margin-right: 4rem;
+    text-align: center;
 }
-
+//Text on landingpage
 .albumtxt{
     text-align: center;
     margin-bottom: 5rem;
     font-weight: 300;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
-
+//Text for secondary albums / used in other custom pages
+.textwrapper{
+    margin-top: 7rem;
+    margin-bottom: 10rem;
+    font-weight: 300;
+}
+.typetitle{
+    // margin-bottom: 3rem;
+    font-size: 2rem;
+}
+.typedescription{
+    font-size: 1.3rem;
+}
 //Gera responsive
+//Container for all albums
 .albumcontainer{
     display: flex;
     flex-flow: wrap;
@@ -27,8 +41,7 @@
         }
       }
 }
-
-
+//Each album
 .albumimg{
     align-items: center;
     margin: auto;
@@ -40,7 +53,7 @@
     position: relative;
     cursor: pointer;
 }
-
+//overlay kemur út fyrir myndirnar  - laga
 //Overlay color and text when hovered 
 .overlaytxt{
 position: absolute;
@@ -57,12 +70,17 @@ left: 0;
 visibility: hidden;
 opacity: 0;
 transition: .5s ease;
+width: 400px;
+height: 411px;
 }
 
 //Makes hover color and text visible when hovering
 .albumimg:hover .overlaytxt {
     visibility: visible;
     opacity: 1;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
 
 }
 
