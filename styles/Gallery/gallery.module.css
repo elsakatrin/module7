@@ -6,17 +6,22 @@
 
 .textwrapper {
   margin-top: 7rem;
-  margin-bottom: 10rem;
+  margin-bottom: 6.5rem;
   font-weight: 300;
 }
 
 .title {
-  margin-bottom: 3rem;
-  font-size: 2.7rem;
+  font-size: 2rem;
 }
 
 .description {
   font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
 }
 
 .gallery {
@@ -44,9 +49,17 @@
   height: 500px;
   width: auto;
   border: 1px solid rgba(204, 204, 204, 0.4);
+  display: block;
+  transition: 0.3s;
 }
 
 .galleryimg {
   display: block;
   transition: 0.3s;
+}
+
+.backicon {
+  float: left;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
 }

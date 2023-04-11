@@ -19,6 +19,14 @@
             "thumbnails": []
           }
         },
+        "homelink": {
+          "type": "Link",
+          "config": {
+            "label": "HomeLink",
+            "placeholder": "",
+            "select": null
+          }
+        },
         "navlink1": {
           "type": "Link",
           "config": {

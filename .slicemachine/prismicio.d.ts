@@ -35,6 +35,46 @@ type HomepageDocumentDataSlicesSlice = NavSliceSlice | OpeningImgSlice | AlbumsS
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+/** Content for Navigation documents */
+interface NavigationDocumentData {
+    /**
+     * Title field in *Navigation*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Navigation → Slice Zone*
+ *
+ */
+type NavigationDocumentDataSlicesSlice = NavigationItemSlice;
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
 /** Content for Page documents */
 interface PageDocumentData {
     /**
@@ -86,7 +126,7 @@ type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice | Album
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = HomepageDocument | PageDocument;
+export type AllDocumentTypes = HomepageDocument | NavigationDocument | PageDocument;
 /**
  * Primary content in AboutSlice → Primary
  *
@@ -191,6 +231,26 @@ interface AlbumsSliceDefaultPrimary {
      *
      */
     pagelink: prismicT.LinkField;
+    /**
+     * AlbumTypeTitle field in *AlbumsSlice → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: albums.primary.albumtypetitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    albumtypetitle: prismicT.RichTextField;
+    /**
+     * AlbumTypeDescription field in *AlbumsSlice → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: albums.primary.albumtypedescription
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    albumtypedescription: prismicT.RichTextField;
 }
 /**
  * Item in AlbumsSlice → Items
@@ -311,6 +371,71 @@ type FooterSliceSliceVariation = FooterSliceSliceDefault;
  */
 export type FooterSliceSlice = prismicT.SharedSlice<"footer_slice", FooterSliceSliceVariation>;
 /**
+ * Primary content in NavigationItem → Primary
+ *
+ */
+interface NavigationItemSliceDefaultPrimary {
+    /**
+     * Logo field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * HomeLink field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.homelink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    homelink: prismicT.LinkField;
+}
+/**
+ * Item in NavigationItem → Items
+ *
+ */
+export interface NavigationItemSliceDefaultItem {
+    /**
+     * Link field in *NavigationItem → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.items[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Default variation for NavigationItem Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavigationItemSliceDefaultPrimary>, Simplify<NavigationItemSliceDefaultItem>>;
+/**
+ * Slice variation for *NavigationItem*
+ *
+ */
+type NavigationItemSliceVariation = NavigationItemSliceDefault;
+/**
+ * NavigationItem Shared Slice
+ *
+ * - **API ID**: `navigation_item`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
+/**
  * Primary content in NavSlice → Primary
  *
  */
@@ -325,6 +450,16 @@ interface NavSliceSliceDefaultPrimary {
      *
      */
     logo: prismicT.ImageField<never>;
+    /**
+     * HomeLink field in *NavSlice → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.homelink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    homelink: prismicT.LinkField;
     /**
      * NavLink1 field in *NavSlice → Primary*
      *
@@ -469,6 +604,16 @@ interface PhotoGallerySliceSliceDefaultPrimary {
      *
      */
     description: prismicT.RichTextField;
+    /**
+     * BackLink field in *PhotoGallerySlice → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: photo_gallery_slice.primary.backlink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    backlink: prismicT.LinkField;
 }
 /**
  * Item in PhotoGallerySlice → Items
@@ -563,6 +708,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceSliceDefaultPrimary, AboutSliceSliceDefault, AboutSliceSliceVariation, AboutSliceSlice, AlbumsSliceDefaultPrimary, AlbumsSliceDefaultItem, AlbumsSliceDefault, AlbumsSliceVariation, AlbumsSlice, FooterSliceSliceDefaultPrimary, FooterSliceSliceDefault, FooterSliceSliceVariation, FooterSliceSlice, NavSliceSliceDefaultPrimary, NavSliceSliceDefaultItem, NavSliceSliceDefault, NavSliceSliceVariation, NavSliceSlice, OpeningImgSliceDefaultPrimary, OpeningImgSliceDefault, OpeningImgSliceVariation, OpeningImgSlice, PhotoGallerySliceSliceDefaultPrimary, PhotoGallerySliceSliceDefaultItem, PhotoGallerySliceSliceDefault, PhotoGallerySliceSliceVariation, PhotoGallerySliceSlice, SubTextSliceDefaultPrimary, SubTextSliceDefault, SubTextSliceVariation, SubTextSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceSliceDefaultPrimary, AboutSliceSliceDefault, AboutSliceSliceVariation, AboutSliceSlice, AlbumsSliceDefaultPrimary, AlbumsSliceDefaultItem, AlbumsSliceDefault, AlbumsSliceVariation, AlbumsSlice, FooterSliceSliceDefaultPrimary, FooterSliceSliceDefault, FooterSliceSliceVariation, FooterSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NavSliceSliceDefaultPrimary, NavSliceSliceDefaultItem, NavSliceSliceDefault, NavSliceSliceVariation, NavSliceSlice, OpeningImgSliceDefaultPrimary, OpeningImgSliceDefault, OpeningImgSliceVariation, OpeningImgSlice, PhotoGallerySliceSliceDefaultPrimary, PhotoGallerySliceSliceDefaultItem, PhotoGallerySliceSliceDefault, PhotoGallerySliceSliceVariation, PhotoGallerySliceSlice, SubTextSliceDefaultPrimary, SubTextSliceDefault, SubTextSliceVariation, SubTextSlice };
     }
 }
