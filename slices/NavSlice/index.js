@@ -5,6 +5,8 @@ import { PrismicLink } from '@prismicio/react';
 import { linkResolver } from '@/prismicio';
 import styles from './../../styles/Nav/nav.module.css'
 
+
+//Navigation for the landing page
 /**
  * @typedef {import("@prismicio/client").Content.NavSliceSlice} NavSliceSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<NavSliceSlice>} NavSliceProps
@@ -12,9 +14,8 @@ import styles from './../../styles/Nav/nav.module.css'
  */
 
 const NavSlice = ({ slice }) => (
- 
-  <section className={styles.contentwrapper}>
 
+  <section className={styles.contentwrapper}>
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
@@ -25,10 +26,10 @@ const NavSlice = ({ slice }) => (
         <PrismicLink  href="./">
           <PrismicNextImage field={slice.primary.logo} 
             alt=""
-            width={303} 
-            height={169}
+            width={210} 
+            height={117}
             imgixParams={{  
-            q: 100,
+            q: 70,
             auto: 'format' }}/>
           </PrismicLink>
       </div>

@@ -1,7 +1,13 @@
+.contentwrapper {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  display: inline;
+}
+
 .bannerimg {
   display: flex;
   justify-content: center;
   text-align: center;
   margin: auto;
-  margin-bottom: 17rem;
+  margin-bottom: 12rem;
 }

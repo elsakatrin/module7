@@ -2,7 +2,7 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
 import styles from './../../styles/Footer/footer.module.css'
-
+import Imgix from 'react-imgix'
 /**
  * @typedef {import("@prismicio/client").Content.FooterSliceSlice} FooterSliceSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<FooterSliceSlice>} FooterSliceProps
@@ -10,7 +10,7 @@ import styles from './../../styles/Footer/footer.module.css'
  */
 const FooterSlice = ({ slice }) => (
   <section className={styles.contentwrapper}>
-    <span className="title">
+    <span className="title"  id="contactsection">
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
 
@@ -26,17 +26,23 @@ const FooterSlice = ({ slice }) => (
   {/* Overlay color and image */}
   <div className={styles.overlay}> 
     <div className={styles.footerimg}>
-    <PrismicNextImage field={slice.primary.footerimage} 
-        alt=""
-        width={1239} 
-        height={622}
+    <Imgix 
+        src={slice.primary.footerimage.url} 
+        srcset={slice.primary.footerimage.url} 
+        alt={slice.primary.footerimage.alt}
+        sizes="(max-width: 76em) 95vw,  (max-width: 64em) 90vw, 1300px"
+        //  sizes='(min-width: 63.75em ) 70em, (min-width: 48em ) 53em, (min-width: 29em ) 38em,  (min-width: 23em ) 20em,'
         imgixParams={{ 
           q: 100, 
           sharp: 10,
           auto: 'format', 
           fm: 'jpg', 
-          cs: 'srgb'
+          cs: 'srgb',
+          ar: '16:7',
+          fit: 'crop',
+          
           }}/>
+
     </div>
   </div>
 </section>

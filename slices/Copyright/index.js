@@ -2,11 +2,11 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 
 /**
- * @typedef {import("@prismicio/client").Content.NavigationItemSlice} NavigationItemSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<NavigationItemSlice>} NavigationItemProps
- * @param { NavigationItemProps }
+ * @typedef {import("@prismicio/client").Content.CopyrightSlice} CopyrightSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<CopyrightSlice>} CopyrightProps
+ * @param { CopyrightProps }
  */
-const NavigationItem = ({ slice }) => (
+const Copyright = ({ slice }) => (
   <section>
     <span className="title">
       {
@@ -20,8 +20,17 @@ const NavigationItem = ({ slice }) => (
       <PrismicRichText field={slice.primary.description}/>
       : <p>start by editing this slice from inside Slice Machine!</p>
     }
-
+    <style jsx>{`
+        section {
+          max-width: 600px;
+          margin: 4em auto;
+          text-align: center;
+        }
+        .title {
+          color: #8592e0;
+        }
+    `}</style>
   </section>
 )
 
-export default NavigationItem
+export default Copyright

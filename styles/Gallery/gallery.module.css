@@ -51,11 +51,7 @@
   border: 1px solid rgba(204, 204, 204, 0.4);
   display: block;
   transition: 0.3s;
-}
-
-.galleryimg {
-  display: block;
-  transition: 0.3s;
+  pointer-events: none;
 }
 
 .backicon {

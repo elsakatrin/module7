@@ -35,10 +35,39 @@ type HomepageDocumentDataSlicesSlice = NavSliceSlice | OpeningImgSlice | AlbumsS
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
-/** Content for Navigation documents */
+/** Content for NavBar documents */
+interface NavbarDocumentData {
+    /**
+     * Slice Zone field in *NavBar*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navbar.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavbarDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *NavBar → Slice Zone*
+ *
+ */
+type NavbarDocumentDataSlicesSlice = NavigationItemSlice;
+/**
+ * NavBar document from Prismic
+ *
+ * - **API ID**: `navbar`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavbarDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavbarDocumentData>, "navbar", Lang>;
+/** Content for Navigation_rep documents */
 interface NavigationDocumentData {
     /**
-     * Title field in *Navigation*
+     * Title field in *Navigation_rep*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -49,7 +78,7 @@ interface NavigationDocumentData {
      */
     title: prismicT.RichTextField;
     /**
-     * Slice Zone field in *Navigation*
+     * Slice Zone field in *Navigation_rep*
      *
      * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
@@ -61,12 +90,12 @@ interface NavigationDocumentData {
     slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
 }
 /**
- * Slice for *Navigation → Slice Zone*
+ * Slice for *Navigation_rep → Slice Zone*
  *
  */
 type NavigationDocumentDataSlicesSlice = NavigationItemSlice;
 /**
- * Navigation document from Prismic
+ * Navigation_rep document from Prismic
  *
  * - **API ID**: `navigation`
  * - **Repeatable**: `true`
@@ -115,7 +144,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice | AlbumsSlice | NavSliceSlice;
+type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice | AlbumsSlice | NavSliceSlice | CopyrightSlice;
 /**
  * Page document from Prismic
  *
@@ -126,7 +155,7 @@ type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice | Album
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = HomepageDocument | NavigationDocument | PageDocument;
+export type AllDocumentTypes = HomepageDocument | NavbarDocument | NavigationDocument | PageDocument;
 /**
  * Primary content in AboutSlice → Primary
  *
@@ -312,6 +341,45 @@ type AlbumsSliceVariation = AlbumsSliceDefault;
  */
 export type AlbumsSlice = prismicT.SharedSlice<"albums", AlbumsSliceVariation>;
 /**
+ * Primary content in Copyright → Primary
+ *
+ */
+interface CopyrightSliceDefaultPrimary {
+    /**
+     * CopyrightText field in *Copyright → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: copyright.primary.copyrighttext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    copyrighttext: prismicT.RichTextField;
+}
+/**
+ * Default variation for Copyright Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Copyright`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CopyrightSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CopyrightSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Copyright*
+ *
+ */
+type CopyrightSliceVariation = CopyrightSliceDefault;
+/**
+ * Copyright Shared Slice
+ *
+ * - **API ID**: `copyright`
+ * - **Description**: `Copyright`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CopyrightSlice = prismicT.SharedSlice<"copyright", CopyrightSliceVariation>;
+/**
  * Primary content in FooterSlice → Primary
  *
  */
@@ -388,13 +456,13 @@ interface NavigationItemSliceDefaultPrimary {
     /**
      * HomeLink field in *NavigationItem → Primary*
      *
-     * - **Field Type**: Link
+     * - **Field Type**: Link to Media
      * - **Placeholder**: *None*
      * - **API ID Path**: navigation_item.primary.homelink
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    homelink: prismicT.LinkField;
+    homelink: prismicT.LinkToMediaField;
 }
 /**
  * Item in NavigationItem → Items
@@ -708,6 +776,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceSliceDefaultPrimary, AboutSliceSliceDefault, AboutSliceSliceVariation, AboutSliceSlice, AlbumsSliceDefaultPrimary, AlbumsSliceDefaultItem, AlbumsSliceDefault, AlbumsSliceVariation, AlbumsSlice, FooterSliceSliceDefaultPrimary, FooterSliceSliceDefault, FooterSliceSliceVariation, FooterSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NavSliceSliceDefaultPrimary, NavSliceSliceDefaultItem, NavSliceSliceDefault, NavSliceSliceVariation, NavSliceSlice, OpeningImgSliceDefaultPrimary, OpeningImgSliceDefault, OpeningImgSliceVariation, OpeningImgSlice, PhotoGallerySliceSliceDefaultPrimary, PhotoGallerySliceSliceDefaultItem, PhotoGallerySliceSliceDefault, PhotoGallerySliceSliceVariation, PhotoGallerySliceSlice, SubTextSliceDefaultPrimary, SubTextSliceDefault, SubTextSliceVariation, SubTextSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavbarDocumentData, NavbarDocumentDataSlicesSlice, NavbarDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceSliceDefaultPrimary, AboutSliceSliceDefault, AboutSliceSliceVariation, AboutSliceSlice, AlbumsSliceDefaultPrimary, AlbumsSliceDefaultItem, AlbumsSliceDefault, AlbumsSliceVariation, AlbumsSlice, CopyrightSliceDefaultPrimary, CopyrightSliceDefault, CopyrightSliceVariation, CopyrightSlice, FooterSliceSliceDefaultPrimary, FooterSliceSliceDefault, FooterSliceSliceVariation, FooterSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NavSliceSliceDefaultPrimary, NavSliceSliceDefaultItem, NavSliceSliceDefault, NavSliceSliceVariation, NavSliceSlice, OpeningImgSliceDefaultPrimary, OpeningImgSliceDefault, OpeningImgSliceVariation, OpeningImgSlice, PhotoGallerySliceSliceDefaultPrimary, PhotoGallerySliceSliceDefaultItem, PhotoGallerySliceSliceDefault, PhotoGallerySliceSliceVariation, PhotoGallerySliceSlice, SubTextSliceDefaultPrimary, SubTextSliceDefault, SubTextSliceVariation, SubTextSlice };
     }
 }

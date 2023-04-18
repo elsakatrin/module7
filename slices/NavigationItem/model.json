@@ -24,7 +24,7 @@
           "config": {
             "label": "HomeLink",
             "placeholder": "",
-            "select": null
+            "select": "media"
           }
         }
       },

@@ -6,6 +6,13 @@ import { linkResolver } from '@/prismicio'
 import { useEffect, useState } from 'react'
 import styles from './../../styles/Albums/albums.module.css'
 import { motion, useScroll } from "framer-motion"
+import * as prismicH from '@prismicio/helpers';
+import Image from 'next/image'
+import Imgix from 'react-imgix'
+import Link from 'next/link'
+import Aos  from 'aos' 
+import "aos/dist/aos.css"
+
 
 /**
  * @typedef {import("@prismicio/client").Content.AlbumsSlice} AlbumsSlice
@@ -16,13 +23,20 @@ import { motion, useScroll } from "framer-motion"
 
 const Albums = ({ slice }) => (
 
-  <section className={styles.contentwrapper}>
+
+//Animation 
+  useEffect(() => {
+    Aos.init({duration: 1000}); //Initialize Aos, It gives a gobal animation for everything you want to animate - 
+  }, [])  ,
+
+  <section className={styles.contentwrapper}  id="albumsection" data-aos="fade" > 
+  {/* This data-aos fade is an animation where the content loads in - now it's faded load (not implemented on all pages !!!) */}
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
 
     {/* Text for albums on homepage */}
-    <div className={styles.albumtxt} >
+    <div className={styles.title} >
       <PrismicRichText field={slice.primary.title} />
       <PrismicRichText field={slice.primary.description} />
     </div>
@@ -37,41 +51,47 @@ const Albums = ({ slice }) => (
         </div>
     </div>
 
-
     {/* Each album linked to a new page; Link to new place, the album image, overlay text */}
     {/* All fields are repeatable types so I only need to have one of each. They map function maps over how many of them are in the client repo*/}
+    <div className={styles.maincontainer}>
     <div className={styles.albumcontainer}>
       {slice?.items?.map((item, i) =>
           <PrismicLink 
             key={i} 
             href={item.pagelink.uid}>
             <div className={styles.albumimg}>
-              <PrismicNextImage 
+              {/* {console.log(item.album.url)} */}
+             <Imgix
                 key={i}
-                field={item.album} 
-                alt=""
-                width={400} 
-                height={411}
-                q={100}
+                src={item.album.url} 
+                alt={item.album.alt}
+                loading="lazy"
+              //   sizes="(min-width: 36em) 28vw, (min-width: 70em) 60vw" 
+              //sizes=" (min-width: 112em) 60vw, (min-width: 47em) 25em, (min-width: 18.75em) 23em (min-width: 18.75em) 18em"
+                sizes="(max-width: 38em) 80vw, 400px "
+                //   (max-width: 48em) 40vw,  (max-width: 64em) 20vw, (max-width: 75em) 20vw "
                 //Overwriting default Imgix behaviour
                 imgixParams={{ 
                   q: 100, //quality, is automatically is set to 45 / only works for lossy formats like jpg and avif
-                  sharp: 10, //Give the image a bit sharpness after they lost some in the compression 
-                  // fit: 'crop', //This was supposed to work as a crop so I wouldn't have to resize the images inside prismic but it doesn't work and I can't figure out why 
-                  // w:'400px', //W and H were supposed to work with the crop function
-                  // h:'411px',
+                  usm: 10, //Give the image a bit sharpness after they lost some in the compression 
+                  fit: 'crop', //Crop the image into the h+w or aspect ratio 
                   auto: 'format', //imgix deternmines if the image can be served by a better format, the process is called automatic content negotiation. Logic will attempt to serve images in AVIF format when supported, if not then WebP, if that's not supported then jpg
                   fm: 'jpg', //When AVIF and WebP is not supported our fallback is jpg
-                  cs: 'srgb' // When the image is compressed the colorspace is removed. I added sRGB in here.
-                }}/>
+                  cs: 'srgb', // When the image is compressed the colorspace is removed. I added sRGB in here.
+                  ar: '0.97:1' //Aspect ratio of 400x411
+       
+                }}/> 
               <div className={styles.overlaytxt}>
                   <PrismicRichText field={item.overlaytext} />
               </div>
             </div>
+
           </PrismicLink> 
             )
           }  
+          </div>
       </div>
+      
   </section>
 )
 

@@ -46,6 +46,9 @@
             },
             "nav_slice": {
               "type": "SharedSlice"
+            },
+            "copyright": {
+              "type": "SharedSlice"
             }
           }
         }

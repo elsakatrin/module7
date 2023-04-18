@@ -1,36 +1,106 @@
+@import "../mixins";
+
 .contentwrapper{
     margin-left: 4rem;
     margin-right: 4rem;
+    padding-top: 2em;
+      @include mobile(){
+        height: auto;
+        display: flex;
+        justify-content: center;
+     }
+     @include xtralargescreen(){
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: auto;
+        margin-bottom: 20rem;
+       
+    }
 }
+
+.aboutwrapper{
+    display:flex; 
+    margin-bottom: 10rem;
+    justify-content: center;
+    align-items: center;
+    @include tablet(){
+        justify-content: center;
+        display: block;
+        margin-bottom: 8rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.aboutimg {
+    display: flex;
+    margin: auto;
+    // @include laptop(){
+    //     display: flex;
+    //     margin: auto;
+    //     justify-content: center;
+    //     padding: 0;
+    // }
+    // @include mobile(){
+    //     margin: auto;
+    //     display: flex;
+    //     padding: 0;
+    //     justify-content: center;
+    // }
+}
+
+//body and name wrapped 
+.aboutxtwrapper{
+    line-height: 1.6rem;
+    max-width: 800px;
+}
+
+//Title on page
 .title{
     text-align: center;
     margin-bottom: 5rem;
     font-weight: 300;
-    font-size: 1.8rem;
+    font-size: 2.1rem; //35
+    @include mobile(){
+        font-size: 1.563rem; //25
+        margin-top: 10rem;
+    }
 }
 
-.aboutwrapper{
-    display:flex;  
-    margin-bottom: 17rem;
-    justify-content: center;
-    align-items: center;
-}
-
+//Sub heading (name in about)
 .name{
     margin-left: 3rem;
-    font-size: 1.4rem;
+    font-size: 1.8rem; //30
     font-weight: 300;
+    @include mobile(){
+        font-size: 1.1rem; //18 1.1
+        text-align: center;
+        margin: auto;
+        display: block;
+        justify-content: center;
+    }
 }
-.aboutimg {
-    display: flex;
-    float: left;
-    margin-left: 8rem;
-    height: auto;
-}
+
+//Body text
 .abouttxt{
-    float: right;
+    // float: right;
     margin-left: 3rem;
-    margin-right: 13rem;
-    vertical-align: 50%;
-    line-height: 1.6;
-}
+    font-size: 1.125;
+    margin-right: 8rem;
+    vertical-align: middle;
+    @include mobile(){
+        font-size: 1rem; 
+        display: block;
+        margin: auto;
+    }
+
+    }
+    // @include xtralargescreen(){
+    //     // margin-right: 60rem;
+    // }
+    // @include tablet(){
+    //     margin-right: 3rem;
+
+    // }
+// }

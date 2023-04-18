@@ -4,6 +4,7 @@ import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../prismicio'
 import { Josefin_Sans } from 'next/font/google'
 
+
 const josefin_sans = Josefin_Sans({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }) {

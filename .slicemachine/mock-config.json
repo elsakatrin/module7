@@ -2,7 +2,8 @@
   "_cts": {
     "homepage": {},
     "page": {},
-    "navigation": {}
+    "navigation": {},
+    "navbar": {}
   },
   "slices": {
     "NavSlice": {
@@ -48,6 +49,11 @@
       }
     },
     "NavigationItem": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Copyright": {
       "default": {
         "primary": {}
       }

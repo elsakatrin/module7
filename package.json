@@ -15,10 +15,13 @@
     "@prismicio/next": "^1.0.3",
     "@prismicio/react": "^2.5.2",
     "@prismicio/slice-simulator-react": "^0.2.3",
+    "aos": "^2.3.4",
     "framer-motion": "^10.11.2",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-imgix": "^9.7.0",
+    "react-scroll": "^1.8.9"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.7",

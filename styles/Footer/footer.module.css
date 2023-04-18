@@ -1,6 +1,8 @@
 .contentwrapper {
   margin-left: 4rem;
   margin-right: 4rem;
+  display: block;
+  padding-top: 2em;
 }
 
 .textwrapper {
@@ -9,16 +11,35 @@
   margin-top: 7rem;
   z-index: 1;
 }
+@media (max-width: 578px) {
+  .textwrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    left: 2rem;
+  }
+}
 
 .cta {
   font-size: 3rem;
   font-weight: 400;
+}
+@media (max-width: 578px) {
+  .cta {
+    font-size: 1.5rem;
+  }
 }
 
 .email {
   margin-top: -0.7rem;
   font-size: 1.2rem;
   font-weight: 400;
+}
+@media (max-width: 578px) {
+  .email {
+    font-size: 1rem;
+    align-content: center;
+  }
 }
 
 .overlay {
@@ -39,7 +60,11 @@
 .footerimg {
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.6;
+  opacity: 0.4;
   background-size: cover;
   background-position: center;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
 }

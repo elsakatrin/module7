@@ -1,3 +1,5 @@
+//This is a stylesheet for the nav slice on landingpage 
+//Not for the nav on other pages
 .contentwrapper{
     margin-left: 4rem;
     margin-right: 4rem;
@@ -7,7 +9,10 @@
 .logo{
     margin-bottom: 0.8rem;
     margin-top: 3rem;
+    max-width: 100%;
 }
+
+
 .navlinks{
     display: flex;
     margin-bottom: 5rem; 
