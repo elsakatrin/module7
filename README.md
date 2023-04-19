@@ -1,3 +1,23 @@
+Hæ! 
+It's not fully finished, I tried to comment in the code but I haven't cleaned up the code enought yet.
+
+I've had some trouble with Prismic since starting this project and working with images/Image optimization. 
+It's 70% code and 30% design.
+I did a lot of research on images on the web, Imgix and prismic.
+My plan was to optimize images through prismic and landed on using Imigix for react. Imgix Parameters explained in Album Slice. 
+
+I'd like to get comments on the project as a whole and how it could be better! The expiriance is while navigating it (UX and speed), how it looks and how the images look regarding to quality. It would be nice to get comments on the code and design.
+All comments are welcome!
+
+Here's my figma file for the project, there's my research for my UI, wireframe and prototype. 
+https://www.figma.com/file/w8OxnpXJ38bEcR4Cmarbma/Untitled?node-id=0%3A1&t=mtaoNeda2uGS1all-1
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
