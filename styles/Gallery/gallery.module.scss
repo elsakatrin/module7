@@ -4,6 +4,7 @@
     margin-left: 4rem;
     margin-right: 4rem;
     text-align: center;
+
 }
 //Title + description
 .textwrapper{
@@ -46,14 +47,17 @@
     justify-content: center;
     margin-bottom: 17rem; 
     padding: 2px;
-    max-width: 102em;
+    // max-width: 102em;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    @include mobile(){
+    object-fit: cover;
+    max-width: 74vw;
+    @include tablet(){
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+
     }
 }
 //Each image in the gallery
@@ -72,8 +76,12 @@
     pointer-events: none;
     justify-content:center;
     @include tablet(){
-        max-width: 36rem;
+        max-width: 21rem;
         height: auto;
+        // max-height: 17rem;
+        // height: auto;
+        max-height: 17rem;
+        width: auto;
     }
 }
 // Back icon that appears inside galleries from series album 
@@ -82,9 +90,10 @@
     margin-top: 2rem;
     height: 50px;
     width: 50px;
+    display: block;
     @include tablet(){
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         margin-left: 0.5rem;
     }
  }
@@ -97,7 +106,5 @@
     display: block;
     @include tablet(){
         margin-left: -5rem;
-        width: 30px;
-        height: 30px;
     }
  }

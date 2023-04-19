@@ -54,12 +54,14 @@
   justify-content: center;
   margin-bottom: 17rem;
   padding: 2px;
-  max-width: 102em;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 74vw;
 }
-@media (max-width: 575px) {
+@media (max-width: 768px) {
   .gallery {
     margin-left: auto;
     margin-right: auto;
@@ -84,8 +86,10 @@
 }
 @media (max-width: 768px) {
   .galleryimg {
-    max-width: 36rem;
+    max-width: 21rem;
     height: auto;
+    max-height: 17rem;
+    width: auto;
   }
 }
 
@@ -94,11 +98,12 @@
   margin-top: 2rem;
   height: 50px;
   width: 50px;
+  display: block;
 }
 @media (max-width: 768px) {
   .backicon {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin-left: 0.5rem;
   }
 }
@@ -113,7 +118,5 @@
 @media (max-width: 768px) {
   .backbtn {
     margin-left: -5rem;
-    width: 30px;
-    height: 30px;
   }
 }

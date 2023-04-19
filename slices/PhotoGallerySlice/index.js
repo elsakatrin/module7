@@ -58,7 +58,7 @@ return(
               loading="lazy"
               alt={item.photos.alt} 
               className={styles.galleryimg}
-              sizes="(max-width: 30em) 29vw, 400px"
+              sizes="(max-width: 30em) 200px, 300px"
               imgixParams={{ 
                 dpr:'2', // Device Pixel Ratio. Controls output density of the image. Default is 1.
                 q: 100,
