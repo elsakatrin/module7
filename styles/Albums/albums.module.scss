@@ -7,16 +7,15 @@
     text-align: center;
     padding-top: 2em;
 }
-
 //Title on landingpage
 .title{
     text-align: center;
     margin-bottom: 5rem;
     font-weight: 300;
     font-size: 2.1rem; //35
-    @include mobile(){
+    @include tablet(){
         font-size: 1.563rem; //25
-        margin-top: 7rem;
+        margin-top: 4rem;
     }
 }
 //Text for secondary albums / used in other custom pages (series)
@@ -32,15 +31,12 @@
 .typedescription{
     font-size: 1.3rem;
 }
-
-
 //Contains album container - problem with alignment so there was one that had to wrap that one too 
 .maincontainer{
     margin: auto;
     display: flex;
     justify-content: center;
 }
-
 //Container for all albums
 .albumcontainer{
     display: flex;
@@ -51,8 +47,10 @@
     justify-content: center;
     margin-bottom: 10rem;
     max-width: 100em;
+    @include tablet(){
+        margin-bottom: 8rem;
+    }
 }
-
 //Each album
 .albumimg{
     align-items: center;
@@ -66,15 +64,12 @@
     cursor: pointer;
 }
     //overlay kemur út fyrir myndirnar  - laga
-    //Overlay color and text when hovered 
-.overlaytxt{
+//Overlay color and text when hovered 
+.albumoverlay{
     position: absolute;
     text-align: center;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.5);
-    font-size: 2rem;
-    font-weight: 200;
-    line-height: 12;
     bottom: 0;
     right: 0;
     top: 0;
@@ -82,18 +77,49 @@
     visibility: hidden;
     opacity: 0;
     transition: .5s ease;
+}
+//The overlay text
+.overlaytxt{
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    line-height: 2.3rem;
+    font-size: 2rem;
+    font-weight: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease;
+    @include tablet(){
+        font-size: 1.9rem;
+        text-align: center;
+    }
+    @include mobile(){
+        font-size: 1.6rem;
+        visibility: visible;
+        opacity: 1;
+        text-align: center;
+    }
     }
 
 //Makes hover color and text visible when hovering
 //It goes a little to fast into the album after clicking for mobile to see the hover/focus effect
-.albumimg:hover .overlaytxt, .albumimg:focus .overlaytxt{
+.albumimg:hover .overlaytxt, .albumimg:focus .overlaytxt {
     visibility: visible;
     opacity: 1;
     overflow: hidden;
     background-size: cover;
     background-position: center;
 }
-
+.albumimg:hover .albumoverlay, .albumimg:focus .albumoverlay{
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
 
 
 

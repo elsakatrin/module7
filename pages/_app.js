@@ -3,11 +3,22 @@ import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../prismicio'
 import { Josefin_Sans } from 'next/font/google'
+import Aos  from 'aos' 
+import "aos/dist/aos.css"
+import { useEffect } from 'react'
 
-
+//Google font for the project
 const josefin_sans = Josefin_Sans({ subsets: ['latin'] })
 
+
 export default function App({ Component, pageProps }) {
+
+//AOS Animate on scroll library
+//Initialize Aos, It gives a gobal animation for everything you want to animate with Aos.
+useEffect(() => {
+  Aos.init({duration: 1000}); 
+}, [])  
+
   return (
     <PrismicProvider
       linkResolver={linkResolver}

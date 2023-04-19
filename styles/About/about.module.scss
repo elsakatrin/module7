@@ -34,13 +34,11 @@
     display: flex;
     margin: auto;
 }
-
 //body and name wrapped 
 .aboutxtwrapper{
     line-height: 1.6rem;
     max-width: 800px;
 }
-
 //Title on page
 .title{
     text-align: center;
@@ -53,7 +51,6 @@
         text-align: center;
     }
 }
-
 //Sub heading (name in about)
 .name{
     font-size: 1.8rem; //30
@@ -68,11 +65,15 @@
         display: block;
         justify-content: center;
     }
+    @include tablet(){
+        text-align: center;
+        margin: auto;
+        display: block;
+        justify-content: center;
+    }
 }
-
 //Body text
 .abouttxt{
-    // float: right;
     margin-left: 3rem;
     font-size: 1.125;
     margin-right: 8rem;
@@ -83,13 +84,9 @@
         margin: auto;
         justify-content: center;
     }
-
+    @include tablet(){
+        margin: auto;
+        display: block;
+        justify-content: center;
     }
-    // @include xtralargescreen(){
-    //     // margin-right: 60rem;
-    // }
-    // @include tablet(){
-    //     margin-right: 3rem;
-
-    // }
-// }
+}

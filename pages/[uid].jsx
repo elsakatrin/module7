@@ -4,14 +4,16 @@ import { createClient, linkResolver } from '../prismicio'
 import { components } from '@/slices/index'
 import { Navigation } from '@/components/Navigation'
 import Copyright from '@/components/Copyright'
+import { PrismicRichText } from '@prismicio/react'
 
  
 const Page = ({ page, navigation, settings }) => {
+  console.log(page)
   return (
-    
   <div>
-     <Navigation navigation={navigation} /> 
-  <SliceZone slices={page.data.slices} components={components} />
+    {/* <title>{page.data.title[0].text} </title> */}
+    <Navigation navigation={navigation} /> 
+    <SliceZone slices={page.data.slices} components={components} />
   {    console.log(navigation)} 
   <Copyright />
   </div>

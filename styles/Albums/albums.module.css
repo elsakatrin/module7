@@ -11,10 +11,10 @@
   font-weight: 300;
   font-size: 2.1rem;
 }
-@media (max-width: 578px) {
+@media (max-width: 768px) {
   .title {
     font-size: 1.563rem;
-    margin-top: 7rem;
+    margin-top: 4rem;
   }
 }
 
@@ -48,6 +48,11 @@
   margin-bottom: 10rem;
   max-width: 100em;
 }
+@media (max-width: 768px) {
+  .albumcontainer {
+    margin-bottom: 8rem;
+  }
+}
 
 .albumimg {
   align-items: center;
@@ -63,14 +68,11 @@
   cursor: pointer;
 }
 
-.overlaytxt {
+.albumoverlay {
   position: absolute;
   text-align: center;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.5);
-  font-size: 2rem;
-  font-weight: 200;
-  line-height: 12;
   bottom: 0;
   right: 0;
   top: 0;
@@ -80,7 +82,44 @@
   transition: 0.5s ease;
 }
 
+.overlaytxt {
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  line-height: 2.3rem;
+  font-size: 2rem;
+  font-weight: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+@media (max-width: 768px) {
+  .overlaytxt {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  .overlaytxt {
+    font-size: 1.6rem;
+    visibility: visible;
+    opacity: 1;
+    text-align: center;
+  }
+}
+
 .albumimg:hover .overlaytxt, .albumimg:focus .overlaytxt {
+  visibility: visible;
+  opacity: 1;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.albumimg:hover .albumoverlay, .albumimg:focus .albumoverlay {
   visibility: visible;
   opacity: 1;
   overflow: hidden;

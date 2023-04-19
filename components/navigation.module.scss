@@ -9,6 +9,13 @@
     justify-content: center;
     max-width: 100%;
 }
+// <ul> tag was taking up extra space
+.ul{
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+}
 .contentwrapper{
     margin-left: 4rem;
     margin-right: 4rem;
@@ -22,6 +29,7 @@
     justify-content: center;
     color: rgb(48, 48, 48);
     margin-bottom: 3em;
+    text-align: center;
 }
 .link{
     cursor: pointer;
@@ -34,6 +42,9 @@
 .copyright{
     text-align: center;
     margin-bottom: 2em;
+    @include mobile(){
+        font-size: 0.78rem;
+    }
 }
 
 .backtotopbtn{
@@ -45,12 +56,12 @@
         height: 40px;
     }
     @include mobile(){
-        width: 35px;
-        height: 35px;
-        right: 0.08rem;
+        width: 30px;
+        height: 30px;
+        right: 0.09rem;
     }
 }
-
+//Repeatable link in navigation bar
 .replink{
     text-decoration: none;
     color: rgb(48, 48, 48);

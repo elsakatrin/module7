@@ -23,12 +23,6 @@ import "aos/dist/aos.css"
 
 const Albums = ({ slice }) => (
 
-
-//Animation 
-  useEffect(() => {
-    Aos.init({duration: 1000}); //Initialize Aos, It gives a gobal animation for everything you want to animate - 
-  }, [])  ,
-
   <section className={styles.contentwrapper}  id="albumsection" data-aos="fade" > 
   {/* This data-aos fade is an animation where the content loads in - now it's faded load (not implemented on all pages !!!) */}
     <span className="title">
@@ -75,14 +69,16 @@ const Albums = ({ slice }) => (
                   fm: 'jpg', //When AVIF and WebP is not supported our fallback is jpg
                   cs: 'srgb', // When the image is compressed the colorspace is removed. I added sRGB in here.
                   ar: '0.97:1' //Aspect ratio of 400x411
-       
                 }}/> 
-              <div className={styles.overlaytxt}>
-                  <PrismicRichText field={item.overlaytext} />
+              <div className={styles.albumoverlay}>
+                <div className={styles.overlaytxt}>
+                  <PrismicRichText 
+                  field={item.overlaytext}/>
               </div>
             </div>
-
+          </div>
           </PrismicLink> 
+          
             )
           }  
           </div>

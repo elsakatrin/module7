@@ -13,6 +13,16 @@
 .title {
   font-size: 2rem;
 }
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 575px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}
 
 .description {
   font-size: 1.3rem;
@@ -22,6 +32,17 @@
   justify-content: center;
   text-decoration: none;
   color: black;
+}
+@media (max-width: 768px) {
+  .description {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+@media (max-width: 575px) {
+  .description {
+    font-size: 1rem;
+  }
 }
 
 .gallery {
@@ -33,13 +54,12 @@
   justify-content: center;
   margin-bottom: 17rem;
   padding: 2px;
-  transition: 0.3s;
   max-width: 102em;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 578px) {
+@media (max-width: 575px) {
   .gallery {
     margin-left: auto;
     margin-right: auto;
@@ -52,28 +72,48 @@
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-  transition: 0.3s;
   margin: 0;
   padding: 0;
   align-items: stretch;
   flex-wrap: wrap;
-  height: 500px;
+  height: 31em;
   width: auto;
   border: 1px solid rgba(204, 204, 204, 0.4);
-  display: block;
-  transition: 0.3s;
   pointer-events: none;
   justify-content: center;
 }
-@media (max-width: 578px) {
+@media (max-width: 768px) {
   .galleryimg {
-    height: 330px;
-    width: auto;
+    max-width: 36rem;
+    height: auto;
   }
 }
 
 .backicon {
-  float: left;
   margin-bottom: 4rem;
   margin-top: 2rem;
+  height: 50px;
+  width: 50px;
+}
+@media (max-width: 768px) {
+  .backicon {
+    width: 30px;
+    height: 30px;
+    margin-left: 0.5rem;
+  }
+}
+
+.backbtn {
+  text-decoration: none;
+  border: none;
+  background: none;
+  float: left;
+  display: block;
+}
+@media (max-width: 768px) {
+  .backbtn {
+    margin-left: -5rem;
+    width: 30px;
+    height: 30px;
+  }
 }

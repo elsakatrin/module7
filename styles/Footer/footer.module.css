@@ -4,7 +4,7 @@
   display: block;
   padding-top: 2em;
 }
-@media (max-width: 578px) {
+@media (max-width: 575px) {
   .contentwrapper {
     display: inline;
   }
@@ -17,46 +17,15 @@
 
 .textwrapper {
   position: absolute;
-  left: 10rem;
-  margin-top: 7rem;
+  margin-top: 2vh;
+  left: 8vw;
+  align-items: baseline;
   z-index: 1;
-}
-@media (max-width: 578px) {
-  .textwrapper {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    text-align: center;
-    justify-content: center;
-    left: auto;
-  }
-}
-@media (max-width: 768px) {
-  .textwrapper {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    justify-content: center;
-    max-width: 300px;
-    margin-left: 3rem;
-  }
-}
-@media (max-width: 1200px) {
-  .textwrapper {
-    max-width: 300px;
-    margin-left: 5rem;
-  }
+  text-align: left;
 }
 @media (min-width: 1830px) {
   .textwrapper {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    justify-content: center;
-    left: auto;
-    max-width: 300px;
-    margin-left: 40rem;
-    margin-top: 1rem;
+    left: 27vw;
   }
 }
 
@@ -64,9 +33,10 @@
   font-size: 3rem;
   font-weight: 400;
 }
-@media (max-width: 578px) {
+@media (max-width: 575px) {
   .cta {
     font-weight: 500;
+    font-size: 1.1rem;
     font-size: 100rem;
     margin: auto;
   }
@@ -78,10 +48,18 @@
     margin: auto;
   }
 }
+@media (max-width: 1200px) {
+  .cta {
+    font-weight: 500;
+    font-size: 3rem;
+    margin: auto;
+    margin-bottom: -1.4rem;
+  }
+}
 @media (min-width: 1830px) {
   .cta {
     font-size: 3.7rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 
@@ -90,9 +68,9 @@
   font-size: 1.2rem;
   font-weight: 400;
 }
-@media (max-width: 578px) {
+@media (max-width: 575px) {
   .email {
-    font-size: 1rem;
+    font-size: 0.9rem;
     max-width: 200px;
     margin: auto;
     align-content: center;
@@ -103,6 +81,13 @@
   .email {
     font-weight: 500;
     font-size: 1.1rem;
+    margin: auto;
+  }
+}
+@media (max-width: 1200px) {
+  .email {
+    font-weight: 400;
+    font-size: 1.4rem;
     margin: auto;
   }
 }
@@ -137,7 +122,6 @@
   background-position: center;
   width: 100%;
   height: auto;
-  display: block;
   position: relative;
   margin-bottom: 4rem;
 }

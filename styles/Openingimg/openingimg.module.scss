@@ -10,11 +10,8 @@
     text-align: center;
     margin: auto;
     margin-bottom: 12rem;
-    // @media only screen and (max-width: 768px) {
-    //     width: 90vw;
-    //     height: auto;
-    //     display: flex;
-    //     justify-content: center;
-    // }
+    @include tablet(){
+        margin-bottom: 7rem;
+    }
 }
 
