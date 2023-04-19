@@ -1,4 +1,6 @@
 Hæ! 
+This is a photography page I made for myself. I'm the client so I added in photos through client prismic repository.
+
 It's not fully finished, I tried to comment in the code but I haven't cleaned up the code enought yet.
 
 I've had some trouble with Prismic since starting this project and working with images/Image optimization. 
