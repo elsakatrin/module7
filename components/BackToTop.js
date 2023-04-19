@@ -43,7 +43,7 @@ export default function BackToTopButton(){
             onClick={scrollUp}>
                 {/* Arrow icon */}
                 <img className={styles.backtotopbtn}
-                alt='Go back'
+                alt='Go back to top'
                 src="caret-up-thin.svg"
                 />
             </button>

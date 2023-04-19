@@ -16,39 +16,13 @@
 //Wrapping all text on footer
 .textwrapper{
     position: absolute;
-    left: 10rem;
-    margin-top: 7rem;
+    margin-top: 2vh;
+    left: 8vw;
+    align-items: baseline;
     z-index: 1;
-    @include mobile(){
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1rem;
-        text-align: center;
-        justify-content: center;
-        left: auto;
-    } 
-    @include tablet(){
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-        justify-content: center;
-  
-        max-width: 300px;
-        margin-left: 3rem;
-    }
-    @include largescreen(){
-        max-width: 300px;
-        margin-left: 5rem;
-    }
-    @include xtralargescreen(){
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-        justify-content: center;
-        left: auto;
-        max-width: 300px;
-        margin-left: 40rem;
-        margin-top: 1rem;
+    text-align: left;
+        @include xtralargescreen(){
+        left: 27vw;
     }
 }
 //Big text on footer - call to action 
@@ -57,19 +31,25 @@
     font-weight: 400;
     @include mobile(){
         font-weight: 500;
+        font-size: 1.1rem;
         font-size: 100rem;
-        
         margin: auto;
     }
     @include tablet(){
         font-weight: 500;
         font-size: 1.8rem;
-   
         margin: auto;
+  
+    }
+    @include largescreen(){
+        font-weight: 500;
+        font-size: 3rem;
+        margin: auto;
+        margin-bottom: -1.4rem;
     }
     @include xtralargescreen(){
         font-size: 3.7rem;
-        font-weight: 600;
+        font-weight: 500;
     }
 }
 //Smaller text on footer
@@ -78,9 +58,8 @@
     font-size: 1.2rem;
     font-weight: 400;
     @include mobile(){
-        font-size: 1rem;
+        font-size: 0.9rem;
         max-width: 200px;
-  
         margin: auto;
         align-content: center;
         justify-content: center;
@@ -88,6 +67,11 @@
     @include tablet(){
         font-weight: 500;
         font-size: 1.1rem;
+        margin: auto;
+    }
+    @include largescreen(){
+        font-weight: 400;
+        font-size: 1.4rem;
         margin: auto;
     }
     @include xtralargescreen(){
@@ -119,10 +103,8 @@
     background-position: center;
     width: 100%;
     height: auto;
-    display: block;
     position: relative;
     margin-bottom: 4rem;
-
 }
 
 

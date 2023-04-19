@@ -30,7 +30,7 @@ export function Navigation({ navigation }) {
 
   return (
     <nav className={styles.contentwrapper}>
-      <ul> 
+      <ul className={styles.ul}> 
         {navigation.data.slices.map((slice) => {
           return (
             //navigation item slice

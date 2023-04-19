@@ -13,6 +13,12 @@
 }
 .title{
     font-size: 2rem;
+    @include tablet(){
+        font-size: 1.8rem;
+    }
+    @include mobile(){
+        font-size: 1.6rem;
+    }
 }
 .description{
     font-size: 1.3rem;
@@ -22,7 +28,15 @@
     justify-content: center;
     text-decoration: none;
     color: black;
+    @include tablet(){
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    @include mobile(){
+        font-size: 1rem;
+    }
 }
+//Gallery container
 .gallery{
     display: flex;
     flex-direction: row;
@@ -32,7 +46,6 @@
     justify-content: center;
     margin-bottom: 17rem; 
     padding: 2px;
-	transition: .3s;
     max-width: 102em;
     justify-content: center;
     margin-left: auto;
@@ -43,30 +56,48 @@
         text-align: center;
     }
 }
+//Each image in the gallery
 .galleryimg{
     align-items: center;
     object-fit: cover;
     display: block;
-    transition: .3s;
     margin: 0;
     padding: 0;
     align-items: stretch;
     flex-wrap: wrap;
-    height: 500px;
+    height: 31em;
     width: auto;
     border: 1px solid rgb(204, 204, 204, .4);
-    display: block;
-    transition: .3s;
+    // transition: .3s;
     pointer-events: none;
-    justify-content:center ;
-    @include mobile(){
-        height: 330px;
-        width: auto;
+    justify-content:center;
+    @include tablet(){
+        max-width: 36rem;
+        height: auto;
     }
 }
 // Back icon that appears inside galleries from series album 
  .backicon{
-    float: left;
     margin-bottom: 4rem;
     margin-top: 2rem;
+    height: 50px;
+    width: 50px;
+    @include tablet(){
+        width: 30px;
+        height: 30px;
+        margin-left: 0.5rem;
+    }
+ }
+ //Button over the icon
+ .backbtn{
+    text-decoration: none;
+    border: none;
+    background: none;
+    float: left;
+    display: block;
+    @include tablet(){
+        margin-left: -5rem;
+        width: 30px;
+        height: 30px;
+    }
  }

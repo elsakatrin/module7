@@ -16,11 +16,6 @@ import "aos/dist/aos.css"
 
 const AboutSlice = ({ slice }) => (
 
-//Animation 
-useEffect(() => {
-  Aos.init({duration: 1000}); //Initialize Aos, It gives a gobal animation for everything you want to animate - 
-}, [])  ,
-
   <section className={styles.contentwrapper} id="aboutsection" data-aos="fade" >
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>

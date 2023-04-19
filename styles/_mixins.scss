@@ -1,23 +1,28 @@
+//extra small - small devices // less than px
 @mixin mobile () {
-    @media (max-width: 578px) {
+    @media (max-width: 575px) {
         @content;
 }
 }
+//small - medium devices 
 @mixin tablet () {
     @media (max-width: 768px) {
         @content;
 }
 }
+//Medium 
 @mixin laptop () {
     @media (max-width: 992x) {
         @content;
 }
 }
+//Large devices
 @mixin largescreen () {
     @media (max-width: 1200px) {
         @content;
 }
 }
+//Extra large devices
 @mixin xtralargescreen () {
     @media (min-width: 1830px) {
         @content;

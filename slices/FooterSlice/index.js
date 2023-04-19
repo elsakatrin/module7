@@ -13,10 +13,6 @@ import "aos/dist/aos.css"
  */
 const FooterSlice = ({ slice }) => (
 
-  useEffect(() => {
-    Aos.init({duration: 1000}); //Initialize Aos, It gives a gobal animation for everything you want to animate - 
-  }, [])  ,
-
   <section className={styles.contentwrapper} data-aos="fade" >
     <span className="title"  id="contactsection">
       <title>Elsa Katrín Ljósmyndari</title>
