@@ -11,6 +11,11 @@ My plan was to optimize images through prismic and landed on using Imigix for re
 I'd like to get comments on the project as a whole and how it could be better! The expiriance is while navigating it (UX and speed), how it looks and how the images look regarding to quality. It would be nice to get comments on the code and design.
 All comments are welcome!
 
+Index/pages is the landingpage
+UID is for other pages (not landingpage or nav, only repeatable)
+Slices is the content inside pages - it aligns up like I've set up in slicemachine (couldn't show that but you can as if there's any confusion)
+
+
 Here's my figma file for the project, there's my research for my UI, wireframe and prototype. 
 https://www.figma.com/file/w8OxnpXJ38bEcR4Cmarbma/Untitled?node-id=0%3A1&t=mtaoNeda2uGS1all-1
 
