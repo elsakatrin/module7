@@ -3,13 +3,21 @@ import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
 import styles from './../../styles/Footer/footer.module.css'
 import Imgix from 'react-imgix'
+import { useEffect } from 'react'
+import Aos  from 'aos' 
+import "aos/dist/aos.css"
 /**
  * @typedef {import("@prismicio/client").Content.FooterSliceSlice} FooterSliceSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<FooterSliceSlice>} FooterSliceProps
  * @param { FooterSliceProps }
  */
 const FooterSlice = ({ slice }) => (
-  <section className={styles.contentwrapper}>
+
+  useEffect(() => {
+    Aos.init({duration: 1000}); //Initialize Aos, It gives a gobal animation for everything you want to animate - 
+  }, [])  ,
+
+  <section className={styles.contentwrapper} data-aos="fade" >
     <span className="title"  id="contactsection">
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
@@ -34,13 +42,12 @@ const FooterSlice = ({ slice }) => (
         //  sizes='(min-width: 63.75em ) 70em, (min-width: 48em ) 53em, (min-width: 29em ) 38em,  (min-width: 23em ) 20em,'
         imgixParams={{ 
           q: 100, 
-          sharp: 10,
+          usm: 12,
           auto: 'format', 
           fm: 'jpg', 
           cs: 'srgb',
           ar: '16:7',
           fit: 'crop',
-          
           }}/>
 
     </div>

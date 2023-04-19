@@ -56,13 +56,16 @@
   .title {
     font-size: 1.563rem;
     margin-top: 10rem;
+    text-align: center;
   }
 }
 
 .name {
-  margin-left: 3rem;
   font-size: 1.8rem;
   font-weight: 300;
+  text-align: center;
+  display: flex;
+  margin-left: 3rem;
 }
 @media (max-width: 578px) {
   .name {
@@ -85,5 +88,6 @@
     font-size: 1rem;
     display: block;
     margin: auto;
+    justify-content: center;
   }
 }

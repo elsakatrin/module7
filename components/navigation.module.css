@@ -35,3 +35,27 @@
   text-align: center;
   margin-bottom: 2em;
 }
+
+.backtotopbtn {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+}
+@media (max-width: 768px) {
+  .backtotopbtn {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 578px) {
+  .backtotopbtn {
+    width: 35px;
+    height: 35px;
+    right: 0.08rem;
+  }
+}
+
+.replink {
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+}

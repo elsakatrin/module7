@@ -60,20 +60,16 @@ const Albums = ({ slice }) => (
             key={i} 
             href={item.pagelink.uid}>
             <div className={styles.albumimg}>
-              {/* {console.log(item.album.url)} */}
              <Imgix
                 key={i}
                 src={item.album.url} 
                 alt={item.album.alt}
                 loading="lazy"
-              //   sizes="(min-width: 36em) 28vw, (min-width: 70em) 60vw" 
-              //sizes=" (min-width: 112em) 60vw, (min-width: 47em) 25em, (min-width: 18.75em) 23em (min-width: 18.75em) 18em"
-                sizes="(max-width: 38em) 80vw, 400px "
-                //   (max-width: 48em) 40vw,  (max-width: 64em) 20vw, (max-width: 75em) 20vw "
+                sizes="(max-width: 38em) 80vw, 400px"
                 //Overwriting default Imgix behaviour
                 imgixParams={{ 
                   q: 100, //quality, is automatically is set to 45 / only works for lossy formats like jpg and avif
-                  usm: 10, //Give the image a bit sharpness after they lost some in the compression 
+                  usm: 12, //Give the image a bit sharpness after they lost some in the compression 
                   fit: 'crop', //Crop the image into the h+w or aspect ratio 
                   auto: 'format', //imgix deternmines if the image can be served by a better format, the process is called automatic content negotiation. Logic will attempt to serve images in AVIF format when supported, if not then WebP, if that's not supported then jpg
                   fm: 'jpg', //When AVIF and WebP is not supported our fallback is jpg

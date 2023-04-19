@@ -6,48 +6,97 @@
     margin-right: 4rem;
     display: block;
     padding-top: 2em;
-    // display: inline;
-    // @media only screen and (max-width: 768px) {
-    //     width: 9rem;
-    //     height: auto;
-    //     display: flex;
-    //     justify-content: center;
-    //     width: 100%;
-    //     margin: auto;
-    // }
+    @include mobile(){
+        display: inline;
+    }
+    @include tablet(){
+        display: inline;
+    }
 }
-
+//Wrapping all text on footer
 .textwrapper{
     position: absolute;
     left: 10rem;
     margin-top: 7rem;
     z-index: 1;
-    // display: inline-block;
     @include mobile(){
         margin-left: auto;
         margin-right: auto;
         margin-top: 1rem;
-        left: 2rem;
+        text-align: center;
+        justify-content: center;
+        left: auto;
+    } 
+    @include tablet(){
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        justify-content: center;
+  
+        max-width: 300px;
+        margin-left: 3rem;
+    }
+    @include largescreen(){
+        max-width: 300px;
+        margin-left: 5rem;
+    }
+    @include xtralargescreen(){
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        justify-content: center;
+        left: auto;
+        max-width: 300px;
+        margin-left: 40rem;
+        margin-top: 1rem;
     }
 }
-
+//Big text on footer - call to action 
 .cta{
     font-size: 3rem;
     font-weight: 400;
     @include mobile(){
-        font-size: 1.5rem;
+        font-weight: 500;
+        font-size: 100rem;
+        
+        margin: auto;
+    }
+    @include tablet(){
+        font-weight: 500;
+        font-size: 1.8rem;
+   
+        margin: auto;
+    }
+    @include xtralargescreen(){
+        font-size: 3.7rem;
+        font-weight: 600;
     }
 }
+//Smaller text on footer
 .email{
     margin-top: -0.7rem;
     font-size: 1.2rem;
     font-weight: 400;
     @include mobile(){
         font-size: 1rem;
+        max-width: 200px;
+  
+        margin: auto;
         align-content: center;
+        justify-content: center;
+    }
+    @include tablet(){
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin: auto;
+    }
+    @include xtralargescreen(){
+        font-size: 2rem;
+        max-width: auto;
+        line-height: 2.8rem;
     }
 }
-
+//White overlay over image
 .overlay{
     display: flex;
     justify-content: center;
@@ -62,7 +111,7 @@
     bottom: 0;
     inset: 0;
 }
-
+//Footer img - the overlay opacity
 .footerimg{
     object-fit: cover;
     opacity: 0.4;
@@ -72,6 +121,8 @@
     height: auto;
     display: block;
     position: relative;
+    margin-bottom: 4rem;
+
 }
 
 

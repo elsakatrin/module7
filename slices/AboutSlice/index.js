@@ -3,6 +3,10 @@ import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
 import styles from './../../styles/About/about.module.css'
 import Imgix from 'react-imgix'
+import { useEffect } from 'react'
+import Aos  from 'aos' 
+import "aos/dist/aos.css"
+
 /**
  * @typedef {import("@prismicio/client").Content.AboutSliceSlice} AboutSliceSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<AboutSliceSlice>} AboutSliceProps
@@ -11,7 +15,13 @@ import Imgix from 'react-imgix'
 
 
 const AboutSlice = ({ slice }) => (
-  <section className={styles.contentwrapper} id="aboutsection">
+
+//Animation 
+useEffect(() => {
+  Aos.init({duration: 1000}); //Initialize Aos, It gives a gobal animation for everything you want to animate - 
+}, [])  ,
+
+  <section className={styles.contentwrapper} id="aboutsection" data-aos="fade" >
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
@@ -36,11 +46,6 @@ const AboutSlice = ({ slice }) => (
               cs: 'srgb', 
               ar: '5:7',
               fit:'crop',
-              // crop:'focalpoint',
-              // fpy: '0.04',
-              // fpx:'3',
-
-              // mask:'ellipse'
             }}/>
             </div>
 

@@ -144,7 +144,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice | AlbumsSlice | NavSliceSlice | CopyrightSlice;
+type PageDocumentDataSlicesSlice = PhotoGallerySliceSlice | SubTextSlice | AlbumsSlice | NavSliceSlice;
 /**
  * Page document from Prismic
  *
@@ -340,45 +340,6 @@ type AlbumsSliceVariation = AlbumsSliceDefault;
  *
  */
 export type AlbumsSlice = prismicT.SharedSlice<"albums", AlbumsSliceVariation>;
-/**
- * Primary content in Copyright → Primary
- *
- */
-interface CopyrightSliceDefaultPrimary {
-    /**
-     * CopyrightText field in *Copyright → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: copyright.primary.copyrighttext
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    copyrighttext: prismicT.RichTextField;
-}
-/**
- * Default variation for Copyright Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Copyright`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type CopyrightSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CopyrightSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *Copyright*
- *
- */
-type CopyrightSliceVariation = CopyrightSliceDefault;
-/**
- * Copyright Shared Slice
- *
- * - **API ID**: `copyright`
- * - **Description**: `Copyright`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type CopyrightSlice = prismicT.SharedSlice<"copyright", CopyrightSliceVariation>;
 /**
  * Primary content in FooterSlice → Primary
  *
@@ -776,6 +737,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavbarDocumentData, NavbarDocumentDataSlicesSlice, NavbarDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceSliceDefaultPrimary, AboutSliceSliceDefault, AboutSliceSliceVariation, AboutSliceSlice, AlbumsSliceDefaultPrimary, AlbumsSliceDefaultItem, AlbumsSliceDefault, AlbumsSliceVariation, AlbumsSlice, CopyrightSliceDefaultPrimary, CopyrightSliceDefault, CopyrightSliceVariation, CopyrightSlice, FooterSliceSliceDefaultPrimary, FooterSliceSliceDefault, FooterSliceSliceVariation, FooterSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NavSliceSliceDefaultPrimary, NavSliceSliceDefaultItem, NavSliceSliceDefault, NavSliceSliceVariation, NavSliceSlice, OpeningImgSliceDefaultPrimary, OpeningImgSliceDefault, OpeningImgSliceVariation, OpeningImgSlice, PhotoGallerySliceSliceDefaultPrimary, PhotoGallerySliceSliceDefaultItem, PhotoGallerySliceSliceDefault, PhotoGallerySliceSliceVariation, PhotoGallerySliceSlice, SubTextSliceDefaultPrimary, SubTextSliceDefault, SubTextSliceVariation, SubTextSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavbarDocumentData, NavbarDocumentDataSlicesSlice, NavbarDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceSliceDefaultPrimary, AboutSliceSliceDefault, AboutSliceSliceVariation, AboutSliceSlice, AlbumsSliceDefaultPrimary, AlbumsSliceDefaultItem, AlbumsSliceDefault, AlbumsSliceVariation, AlbumsSlice, FooterSliceSliceDefaultPrimary, FooterSliceSliceDefault, FooterSliceSliceVariation, FooterSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NavSliceSliceDefaultPrimary, NavSliceSliceDefaultItem, NavSliceSliceDefault, NavSliceSliceVariation, NavSliceSlice, OpeningImgSliceDefaultPrimary, OpeningImgSliceDefault, OpeningImgSliceVariation, OpeningImgSlice, PhotoGallerySliceSliceDefaultPrimary, PhotoGallerySliceSliceDefaultItem, PhotoGallerySliceSliceDefault, PhotoGallerySliceSliceVariation, PhotoGallerySliceSlice, SubTextSliceDefaultPrimary, SubTextSliceDefault, SubTextSliceVariation, SubTextSlice };
     }
 }

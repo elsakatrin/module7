@@ -3,6 +3,7 @@ import { SliceZone } from '@prismicio/react'
 import { createClient, linkResolver } from '../prismicio'
 import { components } from '@/slices/index'
 import { Navigation } from '@/components/Navigation'
+import Copyright from '@/components/Copyright'
 
  
 const Page = ({ page, navigation, settings }) => {
@@ -12,6 +13,7 @@ const Page = ({ page, navigation, settings }) => {
      <Navigation navigation={navigation} /> 
   <SliceZone slices={page.data.slices} components={components} />
   {    console.log(navigation)} 
+  <Copyright />
   </div>
   )
 }

@@ -4,6 +4,16 @@
   display: block;
   padding-top: 2em;
 }
+@media (max-width: 578px) {
+  .contentwrapper {
+    display: inline;
+  }
+}
+@media (max-width: 768px) {
+  .contentwrapper {
+    display: inline;
+  }
+}
 
 .textwrapper {
   position: absolute;
@@ -16,7 +26,37 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    left: 2rem;
+    text-align: center;
+    justify-content: center;
+    left: auto;
+  }
+}
+@media (max-width: 768px) {
+  .textwrapper {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    justify-content: center;
+    max-width: 300px;
+    margin-left: 3rem;
+  }
+}
+@media (max-width: 1200px) {
+  .textwrapper {
+    max-width: 300px;
+    margin-left: 5rem;
+  }
+}
+@media (min-width: 1830px) {
+  .textwrapper {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    justify-content: center;
+    left: auto;
+    max-width: 300px;
+    margin-left: 40rem;
+    margin-top: 1rem;
   }
 }
 
@@ -26,7 +66,22 @@
 }
 @media (max-width: 578px) {
   .cta {
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 100rem;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  .cta {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin: auto;
+  }
+}
+@media (min-width: 1830px) {
+  .cta {
+    font-size: 3.7rem;
+    font-weight: 600;
   }
 }
 
@@ -38,7 +93,24 @@
 @media (max-width: 578px) {
   .email {
     font-size: 1rem;
+    max-width: 200px;
+    margin: auto;
     align-content: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .email {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: auto;
+  }
+}
+@media (min-width: 1830px) {
+  .email {
+    font-size: 2rem;
+    max-width: auto;
+    line-height: 2.8rem;
   }
 }
 
@@ -67,4 +139,5 @@
   height: auto;
   display: block;
   position: relative;
+  margin-bottom: 4rem;
 }

@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .contentwrapper{
     margin-left: 4rem;
     margin-right: 4rem;
@@ -21,7 +23,6 @@
     text-decoration: none;
     color: black;
 }
-
 .gallery{
     display: flex;
     flex-direction: row;
@@ -32,8 +33,16 @@
     margin-bottom: 17rem; 
     padding: 2px;
 	transition: .3s;
+    max-width: 102em;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    @include mobile(){
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 }
-
 .galleryimg{
     align-items: center;
     object-fit: cover;
@@ -49,9 +58,12 @@
     display: block;
     transition: .3s;
     pointer-events: none;
-    // transition: .3s;
+    justify-content:center ;
+    @include mobile(){
+        height: 330px;
+        width: auto;
+    }
 }
-
 // Back icon that appears inside galleries from series album 
  .backicon{
     float: left;

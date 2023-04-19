@@ -34,6 +34,17 @@
   margin-bottom: 17rem;
   padding: 2px;
   transition: 0.3s;
+  max-width: 102em;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 578px) {
+  .gallery {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 
 .galleryimg {
@@ -52,6 +63,13 @@
   display: block;
   transition: 0.3s;
   pointer-events: none;
+  justify-content: center;
+}
+@media (max-width: 578px) {
+  .galleryimg {
+    height: 330px;
+    width: auto;
+  }
 }
 
 .backicon {

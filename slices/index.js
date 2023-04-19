@@ -2,7 +2,6 @@
 
 import AboutSlice from './AboutSlice';
 import AlbumsSlice from './AlbumsSlice';
-import Copyright from './Copyright';
 import FooterSlice from './FooterSlice';
 import NavSlice from './NavSlice';
 import NavigationItem from './NavigationItem';
@@ -13,7 +12,6 @@ import SubText from './SubText';
 export {
 	AboutSlice,
 	AlbumsSlice,
-	Copyright,
 	FooterSlice,
 	NavSlice,
 	NavigationItem,
@@ -25,7 +23,6 @@ export {
 export const components = {
 	about_slice: AboutSlice,
 	albums: AlbumsSlice,
-	copyright: Copyright,
 	footer_slice: FooterSlice,
 	nav_slice: NavSlice,
 	navigation_item: NavigationItem,
