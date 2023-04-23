@@ -11,7 +11,6 @@ const Page = ({ page, navigation, settings }) => {
   console.log(page)
   return (
   <div>
-    {/* <title>{page.data.title[0].text} </title> */}
     <Navigation navigation={navigation} /> 
     <SliceZone slices={page.data.slices} components={components} />
   {    console.log(navigation)} 

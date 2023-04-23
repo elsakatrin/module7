@@ -69,19 +69,23 @@
     padding: 0;
     align-items: stretch;
     flex-wrap: wrap;
-    height: 31em;
+    height: 29em;
     width: auto;
     border: 1px solid rgb(204, 204, 204, .4);
     // transition: .3s;
     pointer-events: none;
     justify-content:center;
     @include tablet(){
-        max-width: 21rem;
-        height: auto;
-        // max-height: 17rem;
+        // max-width: 21rem;
+        // width: 15rem;
+        // max-height: auto;
         // height: auto;
-        max-height: 17rem;
-        width: auto;
+
+        
+        max-height: 14rem;
+        max-width: 20rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
     }
 }
 // Back icon that appears inside galleries from series album 

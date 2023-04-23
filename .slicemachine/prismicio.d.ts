@@ -465,111 +465,6 @@ type NavigationItemSliceVariation = NavigationItemSliceDefault;
  */
 export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
 /**
- * Primary content in NavSlice → Primary
- *
- */
-interface NavSliceSliceDefaultPrimary {
-    /**
-     * Logo field in *NavSlice → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: nav_slice.primary.logo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    logo: prismicT.ImageField<never>;
-    /**
-     * HomeLink field in *NavSlice → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: nav_slice.primary.homelink
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    homelink: prismicT.LinkField;
-    /**
-     * NavLink1 field in *NavSlice → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: nav_slice.primary.navlink1
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    navlink1: prismicT.LinkField;
-    /**
-     * NavLink2 field in *NavSlice → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: nav_slice.primary.navlink2
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    navlink2: prismicT.LinkField;
-    /**
-     * Navlink3 field in *NavSlice → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: nav_slice.primary.navlink3
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    navlink3: prismicT.LinkField;
-    /**
-     * NavLink4 field in *NavSlice → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: nav_slice.primary.navlink4
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    navlink4: prismicT.LinkField;
-}
-/**
- * Item in NavSlice → Items
- *
- */
-export interface NavSliceSliceDefaultItem {
-    /**
-     * NavLink field in *NavSlice → Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: nav_slice.items[].navlink
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    navlink: prismicT.LinkField;
-}
-/**
- * Default variation for NavSlice Slice
- *
- * - **API ID**: `default`
- * - **Description**: `NavSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type NavSliceSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavSliceSliceDefaultPrimary>, Simplify<NavSliceSliceDefaultItem>>;
-/**
- * Slice variation for *NavSlice*
- *
- */
-type NavSliceSliceVariation = NavSliceSliceDefault;
-/**
- * NavSlice Shared Slice
- *
- * - **API ID**: `nav_slice`
- * - **Description**: `NavSlice`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type NavSliceSlice = prismicT.SharedSlice<"nav_slice", NavSliceSliceVariation>;
-/**
  * Primary content in OpeningImgSlice → Primary
  *
  */
@@ -732,11 +627,146 @@ type SubTextSliceVariation = SubTextSliceDefault;
  *
  */
 export type SubTextSlice = prismicT.SharedSlice<"sub_text", SubTextSliceVariation>;
+/**
+ * Primary content in TestSlice → Primary
+ *
+ */
+interface NavSliceSliceDefaultPrimary {
+    /**
+     * TextText field in *TestSlice → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.texttext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    texttext: prismicT.RichTextField;
+    /**
+     * TestImage field in *TestSlice → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.testimage
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    testimage: prismicT.ImageField<never>;
+    /**
+     * TestImage2 field in *TestSlice → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.testimage2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    testimage2: prismicT.ImageField<never>;
+    /**
+     * TestImage3 field in *TestSlice → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.testimage3
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    testimage3: prismicT.ImageField<never>;
+    /**
+     * TestImage4 field in *TestSlice → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.testimage4
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    testimage4: prismicT.ImageField<never>;
+    /**
+     * TestImage5 field in *TestSlice → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.testimage5
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    testimage5: prismicT.ImageField<never>;
+    /**
+     * TestImage6 field in *TestSlice → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.testimage6
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    testimage6: prismicT.ImageField<never>;
+    /**
+     * TestImage7 field in *TestSlice → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.testimage7
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    testimage7: prismicT.ImageField<never>;
+    /**
+     * TestImage8 field in *TestSlice → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.primary.testimage8
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    testimage8: prismicT.ImageField<never>;
+}
+/**
+ * Item in TestSlice → Items
+ *
+ */
+export interface NavSliceSliceDefaultItem {
+    /**
+     * TestGallery field in *TestSlice → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_slice.items[].testgallery
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    testgallery: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for TestSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NavSlice`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavSliceSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavSliceSliceDefaultPrimary>, Simplify<NavSliceSliceDefaultItem>>;
+/**
+ * Slice variation for *TestSlice*
+ *
+ */
+type NavSliceSliceVariation = NavSliceSliceDefault;
+/**
+ * TestSlice Shared Slice
+ *
+ * - **API ID**: `nav_slice`
+ * - **Description**: `NavSlice`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavSliceSlice = prismicT.SharedSlice<"nav_slice", NavSliceSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavbarDocumentData, NavbarDocumentDataSlicesSlice, NavbarDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceSliceDefaultPrimary, AboutSliceSliceDefault, AboutSliceSliceVariation, AboutSliceSlice, AlbumsSliceDefaultPrimary, AlbumsSliceDefaultItem, AlbumsSliceDefault, AlbumsSliceVariation, AlbumsSlice, FooterSliceSliceDefaultPrimary, FooterSliceSliceDefault, FooterSliceSliceVariation, FooterSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, NavSliceSliceDefaultPrimary, NavSliceSliceDefaultItem, NavSliceSliceDefault, NavSliceSliceVariation, NavSliceSlice, OpeningImgSliceDefaultPrimary, OpeningImgSliceDefault, OpeningImgSliceVariation, OpeningImgSlice, PhotoGallerySliceSliceDefaultPrimary, PhotoGallerySliceSliceDefaultItem, PhotoGallerySliceSliceDefault, PhotoGallerySliceSliceVariation, PhotoGallerySliceSlice, SubTextSliceDefaultPrimary, SubTextSliceDefault, SubTextSliceVariation, SubTextSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavbarDocumentData, NavbarDocumentDataSlicesSlice, NavbarDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceSliceDefaultPrimary, AboutSliceSliceDefault, AboutSliceSliceVariation, AboutSliceSlice, AlbumsSliceDefaultPrimary, AlbumsSliceDefaultItem, AlbumsSliceDefault, AlbumsSliceVariation, AlbumsSlice, FooterSliceSliceDefaultPrimary, FooterSliceSliceDefault, FooterSliceSliceVariation, FooterSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, OpeningImgSliceDefaultPrimary, OpeningImgSliceDefault, OpeningImgSliceVariation, OpeningImgSlice, PhotoGallerySliceSliceDefaultPrimary, PhotoGallerySliceSliceDefaultItem, PhotoGallerySliceSliceDefault, PhotoGallerySliceSliceVariation, PhotoGallerySliceSlice, SubTextSliceDefaultPrimary, SubTextSliceDefault, SubTextSliceVariation, SubTextSlice, NavSliceSliceDefaultPrimary, NavSliceSliceDefaultItem, NavSliceSliceDefault, NavSliceSliceVariation, NavSliceSlice };
     }
 }

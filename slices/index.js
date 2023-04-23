@@ -3,30 +3,30 @@
 import AboutSlice from './AboutSlice';
 import AlbumsSlice from './AlbumsSlice';
 import FooterSlice from './FooterSlice';
-import NavSlice from './NavSlice';
 import NavigationItem from './NavigationItem';
 import OpeningImgSlice from './OpeningImgSlice';
 import PhotoGallerySlice from './PhotoGallerySlice';
 import SubText from './SubText';
+import TestSlice from './TestSlice';
 
 export {
 	AboutSlice,
 	AlbumsSlice,
 	FooterSlice,
-	NavSlice,
 	NavigationItem,
 	OpeningImgSlice,
 	PhotoGallerySlice,
 	SubText,
+	TestSlice,
 };
 
 export const components = {
 	about_slice: AboutSlice,
 	albums: AlbumsSlice,
 	footer_slice: FooterSlice,
-	nav_slice: NavSlice,
 	navigation_item: NavigationItem,
 	opening_img: OpeningImgSlice,
 	photo_gallery_slice: PhotoGallerySlice,
 	sub_text: SubText,
+	nav_slice: TestSlice,
 };

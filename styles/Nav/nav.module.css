@@ -4,13 +4,83 @@
   text-align: center;
 }
 
-.logo {
-  margin-bottom: 0.8rem;
-  margin-top: 3rem;
-  max-width: 100%;
+.h1 {
+  margin-bottom: 4rem;
 }
 
-.navlinks {
+.h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.1rem;
+}
+
+.h2imgix {
+  font-size: 1.3rem;
+  margin-bottom: 1.1rem;
+  margin-top: 4rem;
+}
+
+.whatare {
+  text-align: left;
+  align-items: center;
   display: flex;
-  margin-bottom: 5rem;
+  margin: auto;
+  max-width: 80rem;
+  line-height: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.firstdescription {
+  margin-bottom: 10rem;
+}
+
+.paragraphwrapper {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 55rem;
+  margin: auto;
+}
+
+.paragraph {
+  text-align: left;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  max-width: 80rem;
+  line-height: 1.6rem;
+  padding-top: 1rem;
+}
+
+.prismicnextimageab {
+  text-align: left;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  max-width: 80rem;
+  line-height: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.imgixab {
+  text-align: left;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  max-width: 80rem;
+  line-height: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.startsection {
+  margin: auto;
+  padding-bottom: 7rem;
+  max-width: 60rem;
+}
+
+.links {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: left;
+  margin: auto;
+  justify-content: center;
+  display: inline-block;
 }

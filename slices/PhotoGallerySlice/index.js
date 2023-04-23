@@ -58,16 +58,20 @@ return(
               loading="lazy"
               alt={item.photos.alt} 
               className={styles.galleryimg}
-              sizes="(max-width: 30em) 200px, 300px"
+              // sizes="(min-width: 36em) 15rem, 60vw"
+              // sizes="(min-width: 39em) 20vw, 700px "
+              sizes="(min-width: 1280px) 245px 3x, (min-width: 1024px) 190px 2x, (min-width: 776px) 180px 2x, (min-width: 640px) 40vw, 40vw 1x"
+              // sizes="(max-width: 38em) 80vw, 200px"
               imgixParams={{ 
-                dpr:'2', // Device Pixel Ratio. Controls output density of the image. Default is 1.
-                q: 100,
+                // dpr:'2', // Device Pixel Ratio. Controls output density of the image. Default is 1.
+                q: 80,
+                h:"auto",
                 usm: 12, 
+                usmrad:'3',
                 auto: 'format', 
                 cs: 'srgb' ,
                 fit:'max', //Never delivered bigger than it's actual size
-                h: '31rem',
-                w:'auto'
+                fit: 'crop',
               }}/> 
             )})}
       </div>

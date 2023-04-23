@@ -78,7 +78,7 @@
   padding: 0;
   align-items: stretch;
   flex-wrap: wrap;
-  height: 31em;
+  height: 29em;
   width: auto;
   border: 1px solid rgba(204, 204, 204, 0.4);
   pointer-events: none;
@@ -86,10 +86,10 @@
 }
 @media (max-width: 768px) {
   .galleryimg {
-    max-width: 21rem;
-    height: auto;
-    max-height: 17rem;
-    width: auto;
+    max-height: 14rem;
+    max-width: 20rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 }
 

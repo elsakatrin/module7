@@ -19,12 +19,8 @@ const OpeningImg = ({ slice }) => (
       srcset={slice.primary.openingimg.url} 
         className={styles.bannerimg}
         alt={slice.primary.openingimg.alt}
-        // sizes="90vw "
           sizes="  (max-width: 64em) 90vw, 1300px"
-          // (max-width: 76em) 95vw,
-        //  sizes='90vw'
-        // sizes='(min-width: 63.75em ) 70em, (min-width: 48em ) 53em, (min-width: 29em ) 38em,  (min-width: 23em ) 20em,'
-         priority={true} //The image was concidered "Largest Contentful Paint" which means that it's big and takes longer to load. Because it's the first image it was recommended to have as a priority
+          priority={true} //The image was concidered "Largest Contentful Paint" which means that it's big and takes longer to load. Because it's the first image it was recommended to have as a priority
           imgixParams={{ 
             q: 100, 
             usm: 10, 
@@ -35,6 +31,36 @@ const OpeningImg = ({ slice }) => (
             // ar: '2:1',
             fit: 'crop',
           }}/>
+      {/* <Imgix 
+      src={slice.primary.openingimg.url} 
+      srcset={slice.primary.openingimg.url} 
+        className={styles.bannerimg}
+        alt={slice.primary.openingimg.alt}
+          sizes="  (max-width: 64em) 90vw, 1300px"
+          priority={true} //The image was concidered "Largest Contentful Paint" which means that it's big and takes longer to load. Because it's the first image it was recommended to have as a priority
+          imgixParams={{ 
+            q: 100, 
+            usm: 10, 
+            auto: 'format',
+            fm: 'jpg', 
+            cs: 'srgb', 
+            ar: '16:7',
+            // ar: '2:1',
+            fit: 'crop',
+          }}/> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* <PrismicNextImage field={slice.primary.openingimg} 
         className={styles.bannerimg}
         alt=""
@@ -53,3 +79,6 @@ const OpeningImg = ({ slice }) => (
 )
 
 export default OpeningImg
+
+// sizes='(min-width: 63.75em ) 70em, (min-width: 48em ) 53em, (min-width: 29em ) 38em,  (min-width: 23em ) 20em,' 
+//breakpoints
