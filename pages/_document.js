@@ -11,9 +11,6 @@ export default function Document({page}) {
           content="width=device-width, minimum-scale=1, initial-scale=1"
         />
   <title>Elsa Katrín Ljósmyndari</title>
-      {/* <title>
-    <PrismicRichText field={page.data.title} />
-    </title> */}
       </Head>
       <body>
         <Main />
@@ -23,13 +20,3 @@ export default function Document({page}) {
   )
 }
 
-// export async function getStaticProps({ params, previewData }) {
-//   const client = createClient({ previewData })
-//   const page = await client.getByUID('page', params.uid)
-
-//   return {
-//     props: {
-//       page
-//     }
-//   }
-// }

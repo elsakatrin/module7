@@ -1,15 +1,9 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import { PrismicNextImage } from '@prismicio/next'
 import { PrismicLink } from '@prismicio/react'
 import { linkResolver } from '@/prismicio'
-import { useEffect, useState } from 'react'
 import styles from './../../styles/Albums/albums.module.css'
-import { motion, useScroll } from "framer-motion"
-import * as prismicH from '@prismicio/helpers';
-import Image from 'next/image'
 import Imgix from 'react-imgix'
-import Link from 'next/link'
 import Aos  from 'aos' 
 import "aos/dist/aos.css"
 
@@ -24,7 +18,6 @@ import "aos/dist/aos.css"
 const Albums = ({ slice }) => (
 
   <section className={styles.contentwrapper}  id="albumsection" data-aos="fade" > 
-  {/* This data-aos fade is an animation where the content loads in - now it's faded load (not implemented on all pages !!!) */}
     <span className="title">
       <title>Elsa Katrín Ljósmyndari</title>
     </span>
@@ -78,7 +71,6 @@ const Albums = ({ slice }) => (
             </div>
           </div>
           </PrismicLink> 
-          
             )
           }  
           </div>

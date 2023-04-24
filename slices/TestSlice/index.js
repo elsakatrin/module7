@@ -1,7 +1,6 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
-import { PrismicLink } from '@prismicio/react';
 import { linkResolver } from '@/prismicio';
 import styles from './../../styles/Nav/nav.module.css'
 import Imgix from 'react-imgix';
@@ -158,6 +157,7 @@ const TestSlice = ({ slice }) => (
           auto: 'format', 
           cs: 'srgb' ,
         }}/> 
+
 {/* NextPrismicImage conclution */}
     <div className={styles.paragraphwrapper}>
       <p className={styles.paragraph}> 
@@ -248,6 +248,7 @@ const TestSlice = ({ slice }) => (
                 fit: 'crop',
                 ar:'16:9',
               }}/>
+              
       {/* 4. Imgix with DPR */}
         <div className={styles.paragraphwrapper}>
         <p className={styles.parameters}>Imgix Parameters:</p>

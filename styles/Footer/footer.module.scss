@@ -37,13 +37,13 @@
     }
     @include tablet(){
         font-weight: 500;
-        font-size: 1.2rem;
+        font-size: 3rem;
         margin: auto;
   
     }
     @include largescreen(){
         font-weight: 500;
-        font-size: 3rem;
+        font-size: 1.5rem;
         margin: auto;
         margin-bottom: -1.4rem;
     }
@@ -55,7 +55,7 @@
 //Smaller text on footer
 .email{
     margin-top: -0.7rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     @include mobile(){
         font-size: 0.9rem;
@@ -66,14 +66,11 @@
     }
     @include tablet(){
         font-weight: 500;
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin: auto;
+        padding-top: 1rem;
     }
-    @include largescreen(){
-        font-weight: 400;
-        font-size: 1.4rem;
-        margin: auto;
-    }
+
     @include xtralargescreen(){
         font-size: 2rem;
         max-width: auto;

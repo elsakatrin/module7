@@ -30,7 +30,8 @@ export function Navigation({ navigation }) {
 
   return (
     <nav className={styles.contentwrapper}>
-      <ul className={styles.ul}> 
+      <div className={styles.ul}> 
+      {/* <ul className={styles.ul}>  */}
         {navigation.data.slices.map((slice) => {
           return (
             //navigation item slice
@@ -50,11 +51,12 @@ export function Navigation({ navigation }) {
               </div>
                 {/* Navigation links - They're not from prismic because Prismic doesn't have in page anchor scroll so I decided to make my own */}
               <div className={styles.navlinks}>
-              <div  
-                        className={styles.link}
-                      href="./" >
+                      <a
+                      className={styles.link}
+                      alt="Home link"
+                      href="/" >
                       Heim
-                    </div>
+                    </a>
                     <div 
                     className={styles.link}
                       href='albumsection' 
@@ -76,23 +78,11 @@ export function Navigation({ navigation }) {
                       style={{ display: isLandingPage ? 'block' : 'none' }}>
                       Hafa samband
                     </div>
-                      
-
-                      {/* This is a repeatable link field - it's there if the client wants to add more links  */}
-                                        {
-                    slice?.items?.map((item, i) =>
-                      <PrismicLink 
-                      className={styles.replink}
-                      key={i}
-                      href={item.link.uid}>Afkomendur Borgarfjarðar</PrismicLink>
-                    )
-                  } 
+              </div>
             </div>
+              )
+            })}
           </div>
-          )
-        })}
-      </ul>
-      
-    </nav>
+        </nav>
   )
 }

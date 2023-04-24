@@ -1,9 +1,7 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import { PrismicNextImage } from '@prismicio/next'
 import styles from './../../styles/About/about.module.css'
 import Imgix from 'react-imgix'
-import { useEffect } from 'react'
 import Aos  from 'aos' 
 import "aos/dist/aos.css"
 
@@ -55,7 +53,6 @@ const AboutSlice = ({ slice }) => (
         
       </div>
     </div>
-
   </section>
 )
 

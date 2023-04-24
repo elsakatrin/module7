@@ -9,13 +9,7 @@
     justify-content: center;
     max-width: 100%;
 }
-// <ul> tag was taking up extra space
-.ul{
-    margin: 0;
-    padding: 0;
-    left: 0;
-    right: 0;
-}
+
 .contentwrapper{
     margin-left: 4rem;
     margin-right: 4rem;
@@ -34,6 +28,8 @@
 .link{
     cursor: pointer;
     font-size: 1rem;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
     @include mobile(){
         font-size: 0.8rem;
     }
@@ -61,7 +57,8 @@
         right: 0.09rem;
     }
 }
-//Repeatable link in navigation bar
+
+//Repeatable link in navigation bar 
 .replink{
     text-decoration: none;
     color: rgb(48, 48, 48);

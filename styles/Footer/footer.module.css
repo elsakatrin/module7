@@ -44,14 +44,14 @@
 @media (max-width: 768px) {
   .cta {
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 3rem;
     margin: auto;
   }
 }
 @media (max-width: 1200px) {
   .cta {
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin: auto;
     margin-bottom: -1.4rem;
   }
@@ -65,7 +65,7 @@
 
 .email {
   margin-top: -0.7rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 @media (max-width: 575px) {
@@ -80,15 +80,9 @@
 @media (max-width: 768px) {
   .email {
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: auto;
-  }
-}
-@media (max-width: 1200px) {
-  .email {
-    font-weight: 400;
-    font-size: 1.4rem;
-    margin: auto;
+    padding-top: 1rem;
   }
 }
 @media (min-width: 1830px) {

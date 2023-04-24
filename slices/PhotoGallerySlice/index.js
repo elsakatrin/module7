@@ -1,14 +1,13 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import { PrismicNextImage } from '@prismicio/next'
 import styles from './../../styles/Gallery/gallery.module.css'
-import Image from 'next/image'
 import { PrismicLink } from '@prismicio/react'
 import backicon from './../../public/caret-left-thin.svg'
 import Imgix from 'react-imgix'
-import { useState } from 'react'
+
 import { useRouter } from "next/router"
-import { Picture } from 'react-imgix'
+
+
 
 /**
  * @typedef {import("@prismicio/client").Content.PhotoGallerySliceSlice} PhotoGallerySliceSlice
@@ -58,19 +57,18 @@ return(
               loading="lazy"
               alt={item.photos.alt} 
               className={styles.galleryimg}
-              // sizes="(min-width: 36em) 15rem, 60vw"
-              // sizes="(min-width: 39em) 20vw, 700px "
-              sizes="(min-width: 1280px) 245px 3x, (min-width: 1024px) 190px 2x, (min-width: 776px) 180px 2x, (min-width: 640px) 40vw, 40vw 1x"
-              // sizes="(max-width: 38em) 80vw, 200px"
+              sizes="
+              (min-width: 1280px) 245px 3x, 
+              (min-width: 1024px) 190px 2x, 
+              (min-width: 776px) 180px 1x, 
+              (min-width: 640px) 40vw, 40vw 1x"
               imgixParams={{ 
-                // dpr:'2', // Device Pixel Ratio. Controls output density of the image. Default is 1.
-                q: 80,
-                h:"auto",
+                auto: 'format', 
+                q: 78,
                 usm: 12, 
                 usmrad:'3',
-                auto: 'format', 
                 cs: 'srgb' ,
-                fit:'max', //Never delivered bigger than it's actual size
+                fit:'max', //Max so the images never extend their original size
                 fit: 'crop',
               }}/> 
             )})}
@@ -87,11 +85,6 @@ return(
             src='caret-left-thin.svg'
           />
         </button>
-
-                {/* If I use this one I have to go into every page to specify what page I want to go back to - time consuming */}
-    {/* href={slice.primary.backlink.uid}>  */}
-
-
   </section>
 )}
 

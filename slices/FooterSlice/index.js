@@ -1,9 +1,7 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import { PrismicNextImage } from '@prismicio/next'
 import styles from './../../styles/Footer/footer.module.css'
 import Imgix from 'react-imgix'
-import { useEffect } from 'react'
 import Aos  from 'aos' 
 import "aos/dist/aos.css"
 /**
@@ -35,7 +33,6 @@ const FooterSlice = ({ slice }) => (
         srcset={slice.primary.footerimage.url} 
         alt={slice.primary.footerimage.alt}
         sizes="(max-width: 76em) 95vw,  (max-width: 64em) 90vw, 1300px"
-        //  sizes='(min-width: 63.75em ) 70em, (min-width: 48em ) 53em, (min-width: 29em ) 38em,  (min-width: 23em ) 20em,'
         imgixParams={{ 
           q: 100, 
           usm: 12,

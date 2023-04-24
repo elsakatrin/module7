@@ -114,6 +114,7 @@
   background: none;
   float: left;
   display: block;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .backbtn {
